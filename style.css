@@ -151,47 +151,47 @@ div [aria-label="Active Pokemon"] {
     column-gap: 20px;
 }
 
-.rstatbar.right,
-.rstatbar.left,
-.lstatbar.right,
-.lstatbar.left{
+.rstatbar.rightstatbar,
+.rstatbar.leftstatbar,
+.lstatbar.rightstatbar,
+.lstatbar.leftstatbar{
     position: relative !important;
     inset: 0px 0px 0px 0px !important;
    
     align-self: start;
 }
 
-.rstatbar.left {
+.rstatbar.leftstatbar {
     grid-column: 1/2 !important;
     grid-row: 3/4 !important;
     clip-path: polygon(0px 0px, 0px 75px, 180px 75px, 210px 0px) !important;
 }
 
-.rstatbar.right {
+.rstatbar.rightstatbar {
     grid-column: 2/3 !important;
     grid-row: 3/4 !important;
     clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
 }
 
-.rstatbar.right strong, .rstatbar.right .hpbar {
+.rstatbar.rightstatbar strong, .rstatbar.rightstatbar .hpbar {
     margin-left: 25px !important;
 }
 
-.lstatbar.right {
+.lstatbar.rightstatbar {
     grid-column: 2/3 !important;
     grid-row: 1/2 !important;
     clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
 }
-.lstatbar.left {
+.lstatbar.leftstatbar {
     grid-column: 3/4 !important;
     grid-row: 1/2 !important;
     clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
 }
-.lstatbar.right strong, .lstatbar.right .hpbar,
-.lstatbar.left strong, .lstatbar.left .hpbar {
+.lstatbar.rightstatbar strong, .lstatbar.rightstatbar .hpbar,
+.lstatbar.leftstatbar strong, .lstatbar.leftstatbar .hpbar {
     margin-left: 25px !important;
 }
-.lstatbar.left strong, .lstatbar.right strong{
+.lstatbar.leftstatbar strong, .lstatbar.rightstatbar strong{
     margin-top: -5px !important;
 }
 
