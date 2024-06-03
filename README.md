@@ -9,10 +9,10 @@ Currently it does support 2vs2 VGC 2023 Format. No other format have been tested
 Use a browser extension to inject the content of "style.css"
 
 ### Extensions
-[Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
-[Stylus](https://userstyles.world/style/16603/pokemon-swsh-layout)
+[Download for Stylus (_recommended_)](https://userstyles.world/style/16603/pokemon-swsh-layout)  
+[Download for Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
 
-[Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+[Downooad Stylus browser extension](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
 ## Known problems:
 The Teracrystal button works correctly only on Chrome.
