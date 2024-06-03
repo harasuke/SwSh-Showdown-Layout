@@ -1,385 +1,404 @@
 .ps-room .battle-controls {
-    top: 420px !important;
+  top: 420px !important;
 }
 
 .battle {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .background {
-    position: absolute;
-    top: -80px;
+  position: absolute;
+  top: -80px;
 }
 
 :root {
-    --btnH: 35px;
-    --whiteWidthSize: 220;
-    --whiteHeightSize: 55;
-    --wV_val: calc(var(--whiteWidthSize) * 1px);
-    --wH_val: calc(var(--whiteHeightSize) * 1px);
-    /*Colors of types*/
-    --Bug: rgb(173, 185, 68);
-    --Dark: rgb(61, 61, 61);
-    --Dragon: rgb(116, 105, 230);
-    --Electric: rgb(247, 205, 85);
-    --Fairy: rgb(243, 175, 250);
-    --Fighting: rgb(164, 86, 71);
-    --Fire: rgb(235, 83, 53);
-    --Flying: rgb(119, 152, 252);
-    --Ghost: rgb(102, 103, 181);
-    --Grass: rgb(123, 201, 47);
-    --Ground: rgb(203, 178, 90);
-    --Ice: rgb(156, 220, 254);
-    --Normal: rgb(173, 171, 144);
-    --Poison: rgb(159, 91, 150);
-    --Psychic: rgb(230, 100, 152);
-    --Rock: rgb(184, 170, 111);
-    --Steel: rgb(166, 168, 196);
-    --Water: rgb(76, 155, 240);
+  --btnH: 35px;
+  --whiteWidthSize: 220;
+  --whiteHeightSize: 55;
+  --wV_val: calc(var(--whiteWidthSize) * 1px);
+  --wH_val: calc(var(--whiteHeightSize) * 1px);
+  /*Colors of types*/
+  --Bug: rgb(173, 185, 68);
+  --Dark: rgb(61, 61, 61);
+  --Dragon: rgb(116, 105, 230);
+  --Electric: rgb(247, 205, 85);
+  --Fairy: rgb(243, 175, 250);
+  --Fighting: rgb(164, 86, 71);
+  --Fire: rgb(235, 83, 53);
+  --Flying: rgb(119, 152, 252);
+  --Ghost: rgb(102, 103, 181);
+  --Grass: rgb(123, 201, 47);
+  --Ground: rgb(203, 178, 90);
+  --Ice: rgb(156, 220, 254);
+  --Normal: rgb(173, 171, 144);
+  --Poison: rgb(159, 91, 150);
+  --Psychic: rgb(230, 100, 152);
+  --Rock: rgb(184, 170, 111);
+  --Steel: rgb(166, 168, 196);
+  --Water: rgb(76, 155, 240);
+  /*type icon images*/
+  --type_icon_Bug: url(https://archives.bulbagarden.net/media/upload/7/7f/Bug_icon_PE.png?20220824195141);
+  --type_icon_Dark: url(https://archives.bulbagarden.net/media/upload/d/d3/Dark_icon_PE.png);
+  --type_icon_Dragon: url(https://archives.bulbagarden.net/media/upload/a/ac/Dragon_icon_PE.png);
+  --type_icon_Electric: url(https://archives.bulbagarden.net/media/upload/3/32/Electric_icon_PE.png);
+  --type_icon_Fairy: url(https://archives.bulbagarden.net/media/upload/0/01/Fairy_icon_PE.png);
+  --type_icon_Fighting: url(https://archives.bulbagarden.net/media/upload/0/09/Fighting_icon_PE.png);
+  --type_icon_Fire: url(https://archives.bulbagarden.net/media/upload/3/39/Fire_icon_PE.png);
+  --type_icon_Flying: url(https://archives.bulbagarden.net/media/upload/d/d8/Flying_icon_PE.png);
+  --type_icon_Ghost: url(https://archives.bulbagarden.net/media/upload/9/9a/Ghost_icon_PE.png);
+  --type_icon_Grass: url(https://archives.bulbagarden.net/media/upload/5/56/Grass_icon_PE.png);
+  --type_icon_Ground: url(https://archives.bulbagarden.net/media/upload/c/c6/Ground_icon_PE.png);
+  --type_icon_Ice: url(https://archives.bulbagarden.net/media/upload/1/14/Ice_icon_PE.png?20220824195443);
+  --type_icon_Normal: url(https://archives.bulbagarden.net/media/upload/9/90/Normal_icon_PE.png);
+  --type_icon_Poison: url(https://archives.bulbagarden.net/media/upload/7/72/Poison_icon_PE.png);
+  --type_icon_Psychic: url(https://archives.bulbagarden.net/media/upload/9/90/Psychic_icon_PE.png);
+  --type_icon_Rock: url(https://archives.bulbagarden.net/media/upload/f/f3/Rock_icon_PE.png);
+  --type_icon_Steel: url(https://archives.bulbagarden.net/media/upload/5/54/Steel_icon_PE.png);
+  --type_icon_Water: url(https://archives.bulbagarden.net/media/upload/e/e0/Water_icon_PE.png);
+  --type_icon_Stellar: url(https://archives.bulbagarden.net/media/upload/thumb/9/9f/Stellar_icon.png/120px-Stellar_icon.png);
 }
 
 @font-face {
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+    U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 .trainer strong {
-    display: block;
-    font-size: 8pt;
-    margin-bottom: 2px;
-    word-wrap: break-word;
-    color: #fff;
-    text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000;
+  display: block;
+  font-size: 8pt;
+  margin-bottom: 2px;
+  word-wrap: break-word;
+  color: #fff;
+  text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000,
+    -1px 1px #000, -1px 0 #000;
 }
 
 .trainersprite {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 .trainer-near,
 .trainer-far {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 30px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30px;
 }
-
 
 /* Player pokemon icons */
 
 .trainer-near strong {
-    /*grid-row: 1/2;
+  /*grid-row: 1/2;
     grid-column: 3/4;
     justify-self: center;
     align-self: center;*/
-    display: none;
+  display: none;
 }
 
 .leftbar .trainer-near {
-    position: absolute !important;
-    top: 330px;
+  position: absolute !important;
+  top: 330px;
 }
-
 
 /* Remove semi-white laterla bands*/
 
 .leftbar,
 .rightbar {
-    background-color: transparent;
-    border: none !important;
+  background-color: transparent;
+  border: none !important;
 }
-
 
 /*Enemy trainer pokemon icons */
 
 .rightbar.trainer-far {
-    bottom: 0px !important;
+  bottom: 0px !important;
 }
 
 .rightbar .trainer {
-    position: absolute !important;
-    right: 0px !important;
+  position: absolute !important;
+  right: 0px !important;
 }
 
 .rightbar .trainer-far {
-    position: absolute !important;
-    top: -50px !important;
-    left: -200px;
+  position: absolute !important;
+  top: -50px !important;
+  left: -200px;
 }
 
 .trainer-far strong {
-    grid-row: 1/2;
-    grid-column: 1/2;
-    align-self: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: center;
 }
 
 .statbar.rstatbar {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-    padding-top: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  padding-top: 8px;
 }
 
 .statbar.rstatbar strong {
-    margin: 0 2px 0 10px;
+  margin: 0 2px 0 10px;
 }
 
 .statbar.rstatbar .hpbar {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .statbar.lstatbar {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-    padding-top: 10px;
-    margin-top: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  padding-top: 10px;
+  margin-top: 30px;
 }
 
 .statbar.lstatbar,
 .statbar.rstatbar {
-    /* White background with cutted right edge */
-    padding-right: 0;
-    width: var(--wV_val);
-    height: var(--wH_val);
-    background-color: white;
+  /* White background with cutted right edge */
+  padding-right: 0;
+  width: var(--wV_val);
+  height: var(--wH_val);
+  background-color: white;
 }
 
 div [aria-label="Active Pokemon"] {
-    position: absolute !important;
-    top: -50px;
-    display: grid !important;
-    grid-template-columns: repeat(3, 193px) !important;
-    grid-template-rows: 100px 224px 100px !important;
-    column-gap: 20px;
+  position: absolute !important;
+  top: -50px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 193px) !important;
+  grid-template-rows: 100px 224px 100px !important;
+  column-gap: 20px;
 }
 
 .rstatbar.rightstatbar,
 .rstatbar.leftstatbar,
 .lstatbar.rightstatbar,
 .lstatbar.leftstatbar {
-    position: relative !important;
-    inset: 0px 0px 0px 0px !important;
-    align-self: start;
+  position: relative !important;
+  inset: 0px 0px 0px 0px !important;
+  align-self: start;
 }
-
 
 /* Player left pokemon */
 
 .rstatbar.leftstatbar {
-    grid-column: 1/2 !important;
-    grid-row: 3/4 !important;
-    clip-path: polygon(0px 0px, 0px 75px, 180px 75px, 210px 0px) !important;
+  grid-column: 1/2 !important;
+  grid-row: 3/4 !important;
+  clip-path: polygon(0px 0px, 0px 75px, 180px 75px, 210px 0px) !important;
 }
-
 
 /* Player rightpokemon*/
 
 .rstatbar.rightstatbar {
-    grid-column: 2/3 !important;
-    grid-row: 3/4 !important;
-    clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
+  grid-column: 2/3 !important;
+  grid-row: 3/4 !important;
+  clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
 }
 
 .rstatbar.rightstatbar strong,
 .rstatbar.rightstatbar .hpbar {
-    margin-left: 25px !important;
+  margin-left: 25px !important;
 }
-
 
 /* Enemy right pokemon (displayed on your left)*/
 
 .lstatbar.rightstatbar {
-    grid-column: 2/3 !important;
-    grid-row: 1/2 !important;
-    clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
+  grid-column: 2/3 !important;
+  grid-row: 1/2 !important;
+  clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
 }
-
 
 /* Enemy left pokemon (displayed on your right)*/
 
 .lstatbar.leftstatbar {
-    grid-column: 3/4 !important;
-    grid-row: 1/2 !important;
-    clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
+  grid-column: 3/4 !important;
+  grid-row: 1/2 !important;
+  clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
 }
 
 .lstatbar.rightstatbar strong,
 .lstatbar.rightstatbar .hpbar,
 .lstatbar.leftstatbar strong,
 .lstatbar.leftstatbar .hpbar {
-    margin-left: 25px !important;
+  margin-left: 25px !important;
 }
 
 .lstatbar.leftstatbar strong,
 .lstatbar.rightstatbar strong {
-    margin-top: -5px !important;
+  margin-top: -5px !important;
 }
 
 .statbar strong {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: black;
-    font-weight: 400;
-    letter-spacing: -1px;
-    text-align: start;
-    /* text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: black;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-align: start;
+  /* text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000; */
 }
 
 .statbar strong small {
-    color: black;
-    font-weight: 300;
-    margin-right: auto;
+  color: black;
+  font-weight: 300;
+  margin-right: auto;
 }
 
 .statbar strong small:nth-child(1) {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .statbar img {
-    margin-left: 5px;
-    margin-right: auto;
+  margin-left: 5px;
+  margin-right: auto;
 }
 
 .statbar img[alt~="M"] {
-    content: url("https://i.imgur.com/qZTiMw3.png");
-    width: 13px;
-    height: 13px;
-    margin-right: 50px;
+  content: url("https://i.imgur.com/qZTiMw3.png");
+  width: 13px;
+  height: 13px;
+  margin-right: 50px;
 }
 
 .statbar img[alt~="F"] {
-    content: url(https://i.imgur.com/aAyWAi2.png);
-    width: 13px;
-    height: 13px;
+  content: url(https://i.imgur.com/aAyWAi2.png);
+  width: 13px;
+  height: 13px;
 }
 
 .statbar .hpbar {
-    position: absolute;
-    border: 1px solid lightgrey;
-    border-width: 1px 1px 1px 1px;
-    padding: 0px !important;
-    height: 10px;
-    border-radius: 0px !important
-    /* border-radius: 8px 3px 10px 8px !important; */
-    /* transform-style: preserve-3d;
+  position: absolute;
+  border: 1px solid lightgrey;
+  border-width: 1px 1px 1px 1px;
+  padding: 0px !important;
+  height: 10px;
+  border-radius: 0px !important;
+  /* border-radius: 8px 3px 10px 8px !important; */
+  /* transform-style: preserve-3d;
     transform-origin: left;
     transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
 }
 
 .statbar .hpbar .hptext {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    color: black;
-    text-align: center;
-    top: 13px;
-    left: 0px;
-    font-size: 15px;
-    background: none;
-    text-shadow: none !important;
-    /* text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  color: black;
+  text-align: center;
+  top: 13px;
+  left: 0px;
+  font-size: 15px;
+  background: none;
+  text-shadow: none !important;
+  /* text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000; */
 }
 
 .statbar .hpbar .hptextborder {
-    display: none !important;
+  display: none !important;
 }
 
 .statbar .hpbar .hp {
-    height: 9px;
-    border-top: 1px solid rgba(0, 255, 8, 1);
-    background: linear-gradient(90deg, rgba(163, 255, 26, 1) 0%, rgba(0, 255, 8, 1) 100%);
-    border-bottom: 1px solid rgba(0, 255, 8, 1);
-    border-right: 1px solid rgba(0, 255, 8, 1);
-    /* border-radius: 8px 3px 10px 8px !important; */
+  height: 9px;
+  border-top: 1px solid rgba(0, 255, 8, 1);
+  background: linear-gradient(90deg, rgba(163, 255, 26, 1) 0%, rgba(0, 255, 8, 1) 100%);
+  border-bottom: 1px solid rgba(0, 255, 8, 1);
+  border-right: 1px solid rgba(0, 255, 8, 1);
+  /* border-radius: 8px 3px 10px 8px !important; */
 }
 
 .statbar .hpbar .hp {
-    border-radius: 0px !important;
+  border-radius: 0px !important;
 }
 
 .statbar .hpbar .hp-yellow {
-    border-top-color: rgba(254, 170, 50, 1);
-    background: linear-gradient(90deg, rgba(255, 250, 31, 1) 0%, rgba(254, 170, 50, 1) 100%);
-    border-bottom-color: rgba(254, 170, 50, 1);
-    border-right-color: rgba(254, 170, 50, 1);
+  border-top-color: rgba(254, 170, 50, 1);
+  background: linear-gradient(90deg, rgba(255, 250, 31, 1) 0%, rgba(254, 170, 50, 1) 100%);
+  border-bottom-color: rgba(254, 170, 50, 1);
+  border-right-color: rgba(254, 170, 50, 1);
 }
 
 .statbar .hpbar .hp-red {
-    border-top-color: #dc1509;
-    background: #dc1509;
-    border-bottom-color: #dc1509;
-    border-right-color: #dc1509;
+  border-top-color: #dc1509;
+  background: #dc1509;
+  border-bottom-color: #dc1509;
+  border-right-color: #dc1509;
 }
 
 .statbar .hpbar .prevhp {
-    background: #3a3a3a;
-    height: 11px;
-    border-radius: 0 !important;
+  background: #3a3a3a;
+  height: 11px;
+  border-radius: 0 !important;
 }
 
 .statbar .hpbar .prevhp-yellow {
-    background-color: #3a3a3a;
+  background-color: #3a3a3a;
 }
 
 .statbar .hpbar .prevhp-red {
-    background-color: #3a3a3a;
+  background-color: #3a3a3a;
 }
 
 .statbar .status {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 10px;
-    font-size: 8pt;
-    color: #fff;
-    text-transform: uppercase;
-    position: absolute;
-    width: 135px;
-    transform: rotateY( 48deg) translate(57px, 3px) scale(0.8);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 10px;
+  font-size: 8pt;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  width: 135px;
+  transform: rotateY(48deg) translate(57px, 3px) scale(0.8);
 }
 
 .statbar span {
-    color: #fff !important;
-    border-radius: 0;
+  color: #fff !important;
+  border-radius: 0;
 }
 
 .statbar span.bad,
 .statbar span.good {
-    margin: -1px 1px;
+  margin: -1px 1px;
 }
 
 .statbar span.bad {
-    border-color: #4c0603;
-    background: #a61000;
-    text-shadow: -1px -1px #4c0603, 0 -1px #4c0603, 1px -1px #4c0603, 1px 0 #4c0603, 1px 1px #4c0603, 0 1px #4c0603, -1px 1px #4c0603, -1px 0 #4c0603;
+  border-color: #4c0603;
+  background: #a61000;
+  text-shadow: -1px -1px #4c0603, 0 -1px #4c0603, 1px -1px #4c0603, 1px 0 #4c0603, 1px 1px #4c0603,
+    0 1px #4c0603, -1px 1px #4c0603, -1px 0 #4c0603;
 }
 
 .statbar span.good {
-    background: #00a636;
-    border-color: #034c16;
-    text-shadow: -1px -1px #034c16, 0 -1px #034c16, 1px -1px #034c16, 1px 0 #034c16, 1px 1px #034c16, 0 1px #034c16, -1px 1px #034c16, -1px 0 #034c16;
+  background: #00a636;
+  border-color: #034c16;
+  text-shadow: -1px -1px #034c16, 0 -1px #034c16, 1px -1px #034c16, 1px 0 #034c16, 1px 1px #034c16,
+    0 1px #034c16, -1px 1px #034c16, -1px 0 #034c16;
 }
 
 @keyframes statusBlink {
-    0% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
 }
 
 .statbar span.par,
@@ -387,715 +406,706 @@ div [aria-label="Active Pokemon"] {
 .statbar span.brn,
 .statbar span.psn,
 .statbar span.slp {
-    opacity: 1;
-    animation: statusBlink 3s infinite;
-    animation-delay: 2s;
-    position: absolute;
-    right: 13px;
-    top: -36px;
-    height: 15px;
-    background: none;
-    color: transparent;
+  opacity: 1;
+  animation: statusBlink 3s infinite;
+  animation-delay: 2s;
+  position: absolute;
+  right: 13px;
+  top: -36px;
+  height: 15px;
+  background: none;
+  color: transparent;
 }
 
 .statbar span.par {
-    content: url(https://i.imgur.com/377GRJI.png);
+  content: url(https://i.imgur.com/377GRJI.png);
 }
 
 .statbar span.frz {
-    content: url(https://i.imgur.com/cInxMZi.png);
+  content: url(https://i.imgur.com/cInxMZi.png);
 }
 
 .statbar span.brn {
-    content: url(https://i.imgur.com/jXOVtFy.png);
+  content: url(https://i.imgur.com/jXOVtFy.png);
 }
 
 .statbar span.psn {
-    content: url(https://i.imgur.com/E4TZOib.png);
+  content: url(https://i.imgur.com/E4TZOib.png);
 }
 
 .statbar span.slp {
-    content: url(https://i.imgur.com/9tny9FO.png);
+  content: url(https://i.imgur.com/9tny9FO.png);
 }
 
-
 /*******************/
-
 
 /* Battle Messages */
 
-
 /*******************/
-
 
 /*****************
   * Battle Weather *
   *****************/
 
 .turn {
-    position: absolute !important;
-    left: -5px !important;
-    border: none;
-    border-radius: 0;
-    background: transparent;
-    color: white;
-    top: -22px;
-    text-shadow: black 1px 1px;
-    opacity: 1 !important;
-    /* Thanks to marcorulloz7 - sadboy github.com/marcoz7 */
+  position: absolute !important;
+  left: -5px !important;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  top: -22px;
+  text-shadow: black 1px 1px;
+  opacity: 1 !important;
+  /* Thanks to marcorulloz7 - sadboy github.com/marcoz7 */
 }
 
 .weather {
-    top: -70px !important;
-    background-size: 120%;
+  top: -70px !important;
+  background-size: 120%;
 }
-
 
 /***********/
 
-
 /* Weather */
-
 
 /***********/
 
 .sunweather,
 .sunnydayweather,
 .desolatelandweather {
-    background: url(https://pkmn.pro/resources/sun-v4-3.gif) no-repeat scroll left top;
-    color: #664411;
-    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
-    background-size: cover;
+  background: url(https://pkmn.pro/resources/sun-v4-3.gif) no-repeat scroll left top;
+  color: #664411;
+  text-shadow: #ffffff 1px 1px 0, #ffffff 1px -1px 0, #ffffff -1px 1px 0, #ffffff -1px -1px 0;
+  background-size: cover;
 }
 
 .rainweather,
 .raindanceweather,
 .primordialseaweather {
-    background: url(https://pkmn.pro/resources/rain-v4-2.gif) scroll left top;
-    background-size: cover;
-    color: #0044BB;
-    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
-    opacity: 0.8 !important;
+  background: url(https://pkmn.pro/resources/rain-v4-2.gif) scroll left top;
+  background-size: cover;
+  color: #0044bb;
+  text-shadow: #ffffff 1px 1px 0, #ffffff 1px -1px 0, #ffffff -1px 1px 0, #ffffff -1px -1px 0;
+  opacity: 0.8 !important;
 }
 
 .sandstormweather {
-    background: url(https://pkmn.pro/resources/sand-v4.gif) scroll left top;
-    background-size: cover;
-    color: #554433;
-    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/sand-v4.gif) scroll left top;
+  background-size: cover;
+  color: #554433;
+  text-shadow: #ffffff 1px 1px 0, #ffffff 1px -1px 0, #ffffff -1px 1px 0, #ffffff -1px -1px 0;
+  opacity: 0.6 !important;
 }
 
 .snowweather,
 .hailweather {
-    background: url(https://pkmn.pro/resources/hail-v4_5.gif) scroll left top;
-    background-size: cover;
-    color: #114455;
-    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/hail-v4_5.gif) scroll left top;
+  background-size: cover;
+  color: #114455;
+  text-shadow: #ffffff 1px 1px 0, #ffffff 1px -1px 0, #ffffff -1px 1px 0, #ffffff -1px -1px 0;
+  opacity: 0.6 !important;
 }
 
 .weather.electricterrainweather {
-    background: url(https://pkmn.pro/resources/terrain-electric2.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/terrain-electric2.png) scroll left top;
+  background-size: cover;
+  opacity: 0.6 !important;
 }
 
 .weather.mistyterrainweather {
-    background: url(https://pkmn.pro/resources/terrain-mist4.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/terrain-mist4.png) scroll left top;
+  background-size: cover;
+  opacity: 0.6 !important;
 }
 
 .weather.grassyterrainweather {
-    background: url(https://pkmn.pro/resources/terrain-grassy.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/terrain-grassy.png) scroll left top;
+  background-size: cover;
+  opacity: 0.6 !important;
 }
 
 .weather.psychicterrainweather {
-    background: url(https://pkmn.pro/resources/terrain-psychic.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+  background: url(https://pkmn.pro/resources/terrain-psychic.png) scroll left top;
+  background-size: cover;
+  opacity: 0.6 !important;
 }
 
 .pseudoweather {
-    background: url(http://play.pokemonshowdown.com/fx/weather-trickroom.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+  background: url(http://play.pokemonshowdown.com/fx/weather-trickroom.png) scroll left top;
+  background-size: cover;
+  opacity: 0.6 !important;
 }
 
 .weather em {
-    position: absolute !important;
-    inset: 50px 0px 0px 15px !important;
-    margin: 0;
-    color: white !important;
-    font-weight: 500;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
-    opacity: 1 !important;
+  position: absolute !important;
+  inset: 50px 0px 0px 15px !important;
+  margin: 0;
+  color: white !important;
+  font-weight: 500;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+  opacity: 1 !important;
 }
-
 
 /**********************
   * Battle Weather ~end *
   **********************/
 
-.innerbattle>.rightbar+div {
-    animation: none !important;
+.innerbattle > .rightbar + div {
+  animation: none !important;
 }
-
 
 /********************
   * In-Game Shadows *
   ********************/
 
-img[src^="https://play.pokemonshowdown.com/sprites/ani"] {
-    /* -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
+img[src^="https://play.pokemonshowdown.com/sprites/ani"]
+{
+  /* -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
     filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
     transform: scale3d(1, 1, 1.00001); */
-    padding-bottom: 10px;
-    background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+  padding-bottom: 10px;
+  background-image: radial-gradient(
+    closest-side at 50% 90%,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 90%
+  );
 }
-
 
 /******************
   * In-Game Shadows ~end *
   ******************/
-
 
 /********************
   * Move Button Types *
   ********************/
 
 .timerbutton {
-    z-index: 100;
-    position: relative;
+  z-index: 100;
+  position: relative;
 }
 
 .movemenu {
-    position: absolute !important;
-    left: 67.5%;
-    top: -370%;
-    display: grid !important;
-    padding-bottom: 10px;
+  position: absolute !important;
+  left: 67.5%;
+  top: -370%;
+  display: grid !important;
+  padding-bottom: 10px;
 }
 
 .megaevo {
-    background: black;
-    border: none;
-    width: 100px;
-    height: 100px;
-    position: absolute !important;
-    top: -70px;
-    left: 150px;
-    display: grid !important;
-    clip-path: path("M 3 18 L 18 21 L 24 15 L 27 0 L 30 15 L 36 21 L 51 18 L 39 27 L 39 36 L 51 45 L 36 42 L 30 48 L 27 60 L 24 48 L 18 42 L 3 45 L 15 36 L 15 27 Z M 27 21 L 21 27 L 21 36 L 27 42 L 33 36 L 33 27 z");
-    /* Hide the text of the movetype */
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  background: black;
+  border: none;
+  width: 100px;
+  height: 100px;
+  position: absolute !important;
+  top: -70px;
+  left: 150px;
+  display: grid !important;
+  clip-path: path(
+    "M 3 18 L 18 21 L 24 15 L 27 0 L 30 15 L 36 21 L 51 18 L 39 27 L 39 36 L 51 45 L 36 42 L 30 48 L 27 60 L 24 48 L 18 42 L 3 45 L 15 36 L 15 27 Z M 27 21 L 21 27 L 21 36 L 27 42 L 33 36 L 33 27 z"
+  );
+  /* Hide the text of the movetype */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-
 
 /* variable mytype defined later on button move colors*/
 
 .megaevo input {
-    accent-color: var(--myType);
+  accent-color: var(--myType);
 }
 
 .megaevo input {
-    scale: 40;
-    width: 100px;
-    margin-left: -400px;
-    margin-top: 18px;
+  scale: 40;
+  width: 100px;
+  margin-left: -400px;
+  margin-top: 18px;
 }
 
 .movemenu button {
-    border-radius: 50px !important;
-    border: 3px solid black !important;
-    box-shadow: none;
-    height: 35px !important;
-    width: 200px !important;
-    display: grid !important;
-    grid-template-areas: "typelogo name pp";
-    grid-template-columns: auto max(107px) 45px;
+  border-radius: 50px !important;
+  border: 3px solid black !important;
+  box-shadow: none;
+  height: 35px !important;
+  width: 200px !important;
+  display: grid !important;
+  grid-template-areas: "typelogo name pp";
+  grid-template-columns: auto max(107px) 45px;
 }
 
 .movemenu button[disabled~="disabled"] {
-    border: 3px solid black !important;
+  border: 3px solid black !important;
 }
 
 .movemenu button small.type {
-    grid-area: typelogo;
-    width: 27px !important;
-    height: 26px !important;
-    border-radius: 50px;
-    position: relative;
-    top: -6px;
-    left: 0px;
-    /* Hide the text of the movetype */
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  grid-area: typelogo;
+  width: 27px !important;
+  height: 26px !important;
+  border-radius: 50px;
+  position: relative;
+  top: -6px;
+  left: 0px;
+  /* Hide the text of the movetype */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .movemenu button small.pp {
-    grid-area: pp;
-    background: black;
-    color: white;
-    position: relative !important;
-    top: -8px;
-    left: 6px;
-    border-radius: 0 80px 140px 0;
-    height: 100%;
-    padding-left: 10px;
-    padding-top: 10px;
-    /*Should be fixed. When other moves are disabled and pp<10 graphics is odd*/
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
-    clip-path: path('M 15 0 L 38 0 A 5 5 0 0 1 38 32 L 0 32 z');
+  grid-area: pp;
+  background: black;
+  color: white;
+  position: relative !important;
+  top: -8px;
+  left: 6px;
+  border-radius: 0 80px 140px 0;
+  height: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  /*Should be fixed. When other moves are disabled and pp<10 graphics is odd*/
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
+  clip-path: path("M 15 0 L 38 0 A 5 5 0 0 1 38 32 L 0 32 z");
 }
 
 .switchselect,
 .moveselect {
-    display: none !important;
+  display: none !important;
 }
-
 
 /**************/
 
-
 /* MOVE TYPES */
-
 
 /**************/
 
 .movemenu button.type-Ice {
-    background: var(--Ice) !important;
+  background: var(--Ice) !important;
 }
 
 .movemenu button.type-Ice small.type {
-    background: var(--Ice) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_14_koori_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Ice) var(--type_icon_Ice) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Ice']) {
-    --myType: var(--Ice);
+.megaevo:has(img[alt="Ice"]) {
+  --myType: var(--Ice);
 }
 
 .movemenu button.type-Grass {
-    background: var(--Grass) !important;
+  background: var(--Grass) !important;
 }
 
 .movemenu button.type-Grass small.type {
-    background: var(--Grass) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_11_kusa_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Grass) var(--type_icon_Grass) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Grass']) {
-    --myType: var(--Grass);
+.megaevo:has(img[alt="Grass"]) {
+  --myType: var(--Grass);
 }
 
 .movemenu button.type-Fighting {
-    background: var(--Fighting) !important;
-    color: white !important;
-    text-shadow: none;
+  background: var(--Fighting) !important;
+  color: white !important;
+  text-shadow: none;
 }
 
 .movemenu button.type-Fighting small.type {
-    background: var(--Fighting) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_01_kakutou_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Fighting) var(--type_icon_Fighting) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Fighting']) {
-    --myType: var(--Fighting);
+.megaevo:has(img[alt="Fighting"]) {
+  --myType: var(--Fighting);
 }
 
 .movemenu button.type-Ground {
-    background: var(--Ground) !important;
+  background: var(--Ground) !important;
 }
 
 .movemenu button.type-Ground small.type {
-    background: var(--Ground) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_04_jimen_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Ground) var(--type_icon_Ground) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Ground']) {
-    --myType: var(--Ground);
+.megaevo:has(img[alt="Ground"]) {
+  --myType: var(--Ground);
 }
 
 .movemenu button.type-Dark {
-    background: rgb(61, 61, 61) !important;
-    color: white;
-    text-shadow: none;
+  background: rgb(61, 61, 61) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Dark small.type {
-    background: rgb(61, 61, 61) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_16_aku_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Dark) var(--type_icon_Dark) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Dark']) {
-    --myType: var(--Dark);
+.megaevo:has(img[alt="Dark"]) {
+  --myType: var(--Dark);
 }
 
 .movemenu button.type-Flying {
-    background: var(--Flying) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Flying) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Flying small.type {
-    background: var(--Flying) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_02_hikou_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Flying) var(--type_icon_Flying) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Flying']) {
-    --myType: var(--Flying);
+.megaevo:has(img[alt="Flying"]) {
+  --myType: var(--Flying);
 }
 
 .movemenu button.type-Electric {
-    background: var(--Electric) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Electric) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Electric small.type {
-    background: var(--Electric) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_12_denki_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Electric) var(--type_icon_Electric) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Electric']) {
-    --myType: var(--Electric);
+.megaevo:has(img[alt="Electric"]) {
+  --myType: var(--Electric);
 }
 
 .movemenu button.type-Water {
-    background: var(--Water) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Water) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Water small.type {
-    background: var(--Water) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_10_mizu_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Water) var(--type_icon_Water) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Water']) {
-    --myType: var(--Water);
+.megaevo:has(img[alt="Water"]) {
+  --myType: var(--Water);
 }
 
 .movemenu button.type-Normal {
-    background: var(--Normal) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Normal) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Normal small.type {
-    background: var(--Normal) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_00_normal_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Normal) var(--type_icon_Normal) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Normal']) {
-    --myType: var(--Normal);
+.megaevo:has(img[alt="Normal"]) {
+  --myType: var(--Normal);
 }
 
 .movemenu button.type-Psychic {
-    background: var(--Psychic) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Psychic) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Psychic small.type {
-    background: var(--Psychic) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_13_esper_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Psychic) var(--type_icon_Psychic) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Psychic']) {
-    --myType: var(--Psychic);
+.megaevo:has(img[alt="Psychic"]) {
+  --myType: var(--Psychic);
 }
 
 .movemenu button.type-Steel {
-    background: var(--Steel) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Steel) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Steel small.type {
-    background: var(--Steel) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_08_hagane_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Steel) var(--type_icon_Steel) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Steel']) {
-    --myType: var(--Steel);
+.megaevo:has(img[alt="Steel"]) {
+  --myType: var(--Steel);
 }
 
 .movemenu button.type-Poison {
-    background: var(--Poison) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Poison) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Poison small.type {
-    background: var(--Poison) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_03_doku_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Poison) var(--type_icon_Poison) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Poison']) {
-    --myType: var(--Poison);
+.megaevo:has(img[alt="Poison"]) {
+  --myType: var(--Poison);
 }
 
 .movemenu button.type-Rock {
-    background: var(--Rock) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Rock) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Rock small.type {
-    background: var(--Rock) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_05_iwa_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Rock) var(--type_icon_Rock) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Rock']) {
-    --myType: var(--Rock);
+.megaevo:has(img[alt="Rock"]) {
+  --myType: var(--Rock);
 }
 
 .movemenu button.type-Bug {
-    background: var(--Bug) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Bug) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Bug small.type {
-    background: var(--Bug) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_06_mushi_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Bug) var(--type_icon_Bug) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Bug']) {
-    --myType: var(--Bug);
+.megaevo:has(img[alt="Bug"]) {
+  --myType: var(--Bug);
 }
 
 .movemenu button.type-Ghost {
-    background: var(--Ghost) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Ghost) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Ghost small.type {
-    background: var(--Ghost) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_07_ghost_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Ghost) var(--type_icon_Ghost) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Ghost']) {
-    --myType: var(--Ghost);
+.megaevo:has(img[alt="Ghost"]) {
+  --myType: var(--Ghost);
 }
 
 .movemenu button.type-Fire {
-    background: var(--Fire) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Fire) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Fire small.type {
-    background: var(--Fire) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_09_honoo_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Fire) var(--type_icon_Fire) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Fire']) {
-    --myType: var(--Fire);
+.megaevo:has(img[alt="Fire"]) {
+  --myType: var(--Fire);
 }
 
 .movemenu button.type-Dragon {
-    background: var(--Dragon) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Dragon) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Dragon small.type {
-    background: var(--Dragon) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_15_dragon_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Dragon) var(--type_icon_Dragon) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Dragon']) {
-    --myType: var(--Dragon);
+.megaevo:has(img[alt="Dragon"]) {
+  --myType: var(--Dragon);
 }
 
 .movemenu button.type-Fairy {
-    background: var(--Fairy) !important;
-    color: white;
-    text-shadow: none;
+  background: var(--Fairy) !important;
+  color: white;
+  text-shadow: none;
 }
 
 .movemenu button.type-Fairy small.type {
-    background: var(--Fairy) url('https://www.cpokemon.com/pokes/swsh/sprites/type-icons/typeIcon_17_yousei_00%5Et.png') no-repeat scroll center;
-    background-size: cover;
-    background-origin: padding-box;
-    background-clip: border-box;
+  background: var(--Fairy) var(--type_icon_Fairy) no-repeat scroll center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
-.megaevo:has(img[alt='Fairy']) {
-    --myType: var(--Fairy);
+.megaevo:has(img[alt="Fairy"]) {
+  --myType: var(--Fairy);
 }
-
 
 /******************
   * Move Types ~end *
   ******************/
-
 
 /******************
   * Chat Log ~start *
 ********************/
 
 .spacer.battle-history {
-    border-top: 2px solid rgba(171, 183, 183, 0.2);
+  border-top: 2px solid rgba(171, 183, 183, 0.2);
 }
 
 .battle-history {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
-    padding-top: 2px;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
+  padding-top: 2px;
 }
 
 h2.battle-history {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    /* Actually had to be changed here */
-    border-bottom: none;
-    padding: 10px;
-    margin-top: -7px;
-    margin-bottom: -8px;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  /* Actually had to be changed here */
+  border-bottom: none;
+  padding: 10px;
+  margin-top: -7px;
+  margin-bottom: -8px;
 }
 
-h2.battle-history+.chat {
-    margin-top: 15px;
+h2.battle-history + .chat {
+  margin-top: 15px;
 }
 
-.battle-history+h2.battle-history {
-    border: 0px;
+.battle-history + h2.battle-history {
+  border: 0px;
 }
 
-h2.battle-history+.spacer.battle-history {
-    border: 0px;
+h2.battle-history + .spacer.battle-history {
+  border: 0px;
 }
 
-.battle-history+.battle-history small::before {
-    content: "⇾ ";
-    font-weight: bold;
+.battle-history + .battle-history small::before {
+  content: "⇾ ";
+  font-weight: bold;
 }
 
-.spacer.battle-history+.battle-history small::before {
-    content: "☀ ";
-    font-weight: bold;
-    color: #5264bd;
+.spacer.battle-history + .battle-history small::before {
+  content: "☀ ";
+  font-weight: bold;
+  color: #5264bd;
 }
 
-.spacer.battle-history+.battle-history small {
-    font-weight: bold;
-    color: #5264bd;
+.spacer.battle-history + .battle-history small {
+  font-weight: bold;
+  color: #5264bd;
 }
 
-.spacer.battle-history+h2.battle-history::before {
-    content: "⇌ ";
-    opacity: 0.2;
+.spacer.battle-history + h2.battle-history::before {
+  content: "⇌ ";
+  opacity: 0.2;
 }
 
 .chat.message-error {
-    color: #bd5252;
+  color: #bd5252;
 }
 
 .chat.message-error:nth-child(odd) {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .chat.message-error::before {
-    content: "⧗  ";
-    color: #bd5252;
+  content: "⧗  ";
+  color: #bd5252;
 }
 
 abbr[title] {
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 abbr[title]:hover {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-    border: 2px solid;
-    text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid;
+  text-decoration: none;
 }
 
 abbr[title]:hover::before {
-    font-weight: bold;
-    content: "▸";
-    color: #000;
+  font-weight: bold;
+  content: "▸";
+  color: #000;
 }
 
 abbr[title]:hover::after {
-    font-weight: bold;
-    content: "◂";
-    color: #000;
+  font-weight: bold;
+  content: "◂";
+  color: #000;
 }
 
 .chat {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
 }
 
 .battle-history small {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
 }
 
 .battle-log {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
-    border: none;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
+  border: none;
 }
 
 .userlist {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
-    border: none;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
+  border: none;
 }
 
 .battle-log-add {
-    font-family: 'Ubuntu', Trebuchet MS, Verdana;
-    letter-spacing: 0.3px;
-    border: none;
+  font-family: "Ubuntu", Trebuchet MS, Verdana;
+  letter-spacing: 0.3px;
+  border: none;
 }
