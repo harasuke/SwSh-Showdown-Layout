@@ -10,6 +10,7 @@ Use a browser extension to inject the content of "style.css"
 
 ### Extensions
 [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
+[Stylus](https://userstyles.world/style/16603/pokemon-swsh-layout)
 
 [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
