@@ -1,7 +1,7 @@
-# [Ver 1.0 - Alpha] SwSh-Showdown-Layout
+# [Ver 1.0.2 - Alpha] SwSh-Showdown-Layout
 Theme for Pokémon Showdown based on the style of Sword&amp;Shield main games.
 
-Currently it does support 2vs2 VGC 2023 Format. No other format have been tested.
+Supports 2023 + 2024 VGC formats. No other formats have been tested.
 
 <img width="638" alt="Screenshot 2022-12-19 at 22 41 03" src="https://user-images.githubusercontent.com/30316462/208529567-74cea360-017d-4e12-bb79-63a7715231a5.png">
 
@@ -9,13 +9,15 @@ Currently it does support 2vs2 VGC 2023 Format. No other format have been tested
 Use a browser extension to inject the content of "style.css"
 
 ### Extensions
+[Download Stylus browser extension (_recommended_)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+[Download Stylish browser extension](https://chromewebstore.google.com/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=it)
+
+#### Install Theme
 [Download for Stylus (_recommended_)](https://userstyles.world/style/16603/pokemon-swsh-layout)  
 [Download for Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
 
-[Downooad Stylus browser extension](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
-
 ## Known problems:
-The Teracrystal button works correctly only on Chrome.
+The Teracrystal button works correctly only on Chrome (wip).
 It relies on checkbox accent-color property to match the Color of the Teratype Type Color.
 
 ## Reference
