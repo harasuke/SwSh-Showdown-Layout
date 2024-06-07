@@ -56,6 +56,26 @@
   --type_icon_Steel: url(https://archives.bulbagarden.net/media/upload/5/54/Steel_icon_PE.png);
   --type_icon_Water: url(https://archives.bulbagarden.net/media/upload/e/e0/Water_icon_PE.png);
   --type_icon_Stellar: url(https://archives.bulbagarden.net/media/upload/thumb/9/9f/Stellar_icon.png/120px-Stellar_icon.png);
+  /* type name with icon images */
+  --type_name_Bug: url(https://archives.bulbagarden.net/media/upload/thumb/b/bd/BugIC.png/120px-BugIC.png);
+  --type_name_Dark: url(https://archives.bulbagarden.net/media/upload/thumb/e/e3/DarkIC.png/120px-DarkIC.png);
+  --type_name_Dragon: url(https://archives.bulbagarden.net/media/upload/thumb/c/c3/DragonIC.png/120px-DragonIC.png);
+  --type_name_Electric: url(https://archives.bulbagarden.net/media/upload/thumb/e/ea/ElectricIC.png/120px-ElectricIC.png);
+  --type_name_Fairy: url(https://archives.bulbagarden.net/media/upload/thumb/3/31/FairyIC.png/120px-FairyIC.png);
+  --type_name_Fighting: url(https://archives.bulbagarden.net/media/upload/thumb/9/9b/FightingIC.png/120px-FightingIC.png);
+  --type_name_Fire: url(https://archives.bulbagarden.net/media/upload/thumb/9/9f/FireIC.png/120px-FireIC.png);
+  --type_name_Flying: url(https://archives.bulbagarden.net/media/upload/thumb/d/dc/FlyingIC.png/120px-FlyingIC.png);
+  --type_name_Ghost: url(https://archives.bulbagarden.net/media/upload/thumb/c/c3/GhostIC.png/120px-GhostIC.png);
+  --type_name_Grass: url(https://archives.bulbagarden.net/media/upload/thumb/a/a5/GrassIC.png/120px-GrassIC.png);
+  --type_name_Ground: url(https://archives.bulbagarden.net/media/upload/thumb/8/87/GroundIC.png/120px-GroundIC.png);
+  --type_name_Ice: url(https://archives.bulbagarden.net/media/upload/thumb/8/86/IceIC.png/120px-IceIC.png);
+  --type_name_Normal: url(https://archives.bulbagarden.net/media/upload/thumb/0/0f/NormalIC.png/120px-NormalIC.png);
+  --type_name_Poison: url(https://archives.bulbagarden.net/media/upload/thumb/8/86/PoisonIC.png/120px-PoisonIC.png);
+  --type_name_Psychic: url(https://archives.bulbagarden.net/media/upload/thumb/f/f8/PsychicIC.png/120px-PsychicIC.png);
+  --type_name_Rock: url(https://archives.bulbagarden.net/media/upload/thumb/e/e6/RockIC.png/120px-RockIC.png);
+  --type_name_Steel: url(https://archives.bulbagarden.net/media/upload/thumb/7/7e/SteelIC.png/120px-SteelIC.png);
+  --type_name_Water: url(https://archives.bulbagarden.net/media/upload/thumb/b/b0/WaterIC.png/120px-WaterIC.png);
+  --type_name_Stellar: url(https://archives.bulbagarden.net/media/upload/thumb/c/c0/StellarIC_SV.png/120px-StellarIC_SV.png);
 }
 
 @font-face {
@@ -63,8 +83,8 @@
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
-    U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 .trainer strong {
@@ -93,9 +113,9 @@
 
 .trainer-near strong {
   /*grid-row: 1/2;
-    grid-column: 3/4;
-    justify-self: center;
-    align-self: center;*/
+  grid-column: 3/4;
+  justify-self: center;
+  align-self: center;*/
   display: none;
 }
 
@@ -286,8 +306,8 @@ div [aria-label="Active Pokemon"] {
   border-radius: 0px !important;
   /* border-radius: 8px 3px 10px 8px !important; */
   /* transform-style: preserve-3d;
-    transform-origin: left;
-    transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
+  transform-origin: left;
+  transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
 }
 
 .statbar .hpbar .hptext {
@@ -444,8 +464,8 @@ div [aria-label="Active Pokemon"] {
 /*******************/
 
 /*****************
-  * Battle Weather *
-  *****************/
+* Battle Weather *
+*****************/
 
 .turn {
   position: absolute !important;
@@ -548,22 +568,22 @@ div [aria-label="Active Pokemon"] {
 }
 
 /**********************
-  * Battle Weather ~end *
-  **********************/
+* Battle Weather ~end *
+**********************/
 
 .innerbattle > .rightbar + div {
   animation: none !important;
 }
 
 /********************
-  * In-Game Shadows *
-  ********************/
+* In-Game Shadows *
+********************/
 
 img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 {
   /* -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-    filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-    transform: scale3d(1, 1, 1.00001); */
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
+  transform: scale3d(1, 1, 1.00001); */
   padding-bottom: 10px;
   background-image: radial-gradient(
     closest-side at 50% 90%,
@@ -574,12 +594,12 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /******************
-  * In-Game Shadows ~end *
-  ******************/
+* In-Game Shadows ~end *
+******************/
 
 /********************
-  * Move Button Types *
-  ********************/
+* Move Button Types *
+********************/
 
 .timerbutton {
   z-index: 100;
@@ -984,11 +1004,11 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /******************
-  * Move Types ~end *
-  ******************/
+* Move Types ~end *
+******************/
 
 /******************
-  * Chat Log ~start *
+* Chat Log ~start *
 ********************/
 
 .spacer.battle-history {
@@ -1109,3 +1129,354 @@ abbr[title]:hover::after {
   letter-spacing: 0.3px;
   border: none;
 }
+  
+  
+/*********************
+* Teambuilder ~start *
+**********************/
+  .teamchart {
+      display: grid;
+      grid-template-areas:
+          "menu menu"
+          "format format"
+          "pkmn1 pkmn4"
+          "pkmn2 pkmn5"
+          "pkmn3 pkmn6";
+      grid-auto-flow: column;
+  }
+  ol.teamchart>li:not([value]),
+  ol.teamchart>label,
+  ol.teamchart>br {
+      grid-area: menu;
+  }
+  ol.teamchart>li.format-select{
+      grid-area: format;   
+  }
+  .teamchart>li[value] {
+      place-self: center;
+  }
+  .teamchart li[value='0'] {
+      grid-area: pkmn1;
+  }
+  .teamchart li[value='1'] {
+      grid-area: pkmn2;
+  }
+  .teamchart li[value='2'] {
+      grid-area: pkmn3;
+  }
+  .teamchart li[value='3'] {
+      grid-area: pkmn4;
+  }
+  .teamchart li[value='4'] {
+      grid-area: pkmn5;
+  }
+  .teamchart li[value='5'] {
+      grid-area: pkmn6;
+  }
+  .teamchart:not(:has(li[value='2'])) {
+      display: block;
+  }
+  .teamchart:not(li[value='2']) + .teambuilder-results,
+  .teamchart:not(li[value='2']) + .teambuilder-results + .teambuilder-pokemon-import {
+      top: 244px !important;
+  }
+  /* Pokemon sprite and selector Input */
+  .teamchart li[value] .setchart-nickname {
+      display: none;
+  }
+  .teamchart li[value] .setcell-pokemon {
+      position: absolute;
+      top: var(--input_name_details);
+      left: 8px;
+  }
+  .teamchart li[value] .setcell-pokemon>label {
+      display: none;
+  }
+  .teamchart li[value] .setcell-pokemon>input {
+      width: 166px;
+      border-radius: 20px 20px 0 0;
+      padding: 0 0 0 12px;
+      border-top: 1px solid #999;
+      border-left: 1px solid #999;
+      border-right: 1px solid #999;
+  }
+  .teamchart li[value] {
+      --input_name_details: -20px;
+      display: flex;
+      flex-direction: row-reverse;
+      background: transparent !important;
+      width: 526px;
+      height: 164px;
+      margin: 16px 0 24px 8px !important;
+      padding: 0 !important;
+  }
+  .teamchart li[value] button,
+  .teamchart li[value] input {
+      box-shadow: none;
+      border: 1px solid #C4D0DB;
+      border-radius: 20px;
+  }
+  .teamchart li[value] .setchart {
+      padding: 0 !important;
+      margin: 0 !important;
+      background-position: 4px 12px !important;
+      background-size: 150px 150px;
+      height: 100%;
+  }
+  /* Pokemon item icon */
+  .teamchart li[value] span.itemicon {
+      position: absolute;
+      top: 104px;
+  }
+  /* pokemon types */
+  .setcell-typeicons > img[src*= "types"] {
+      opacity: 1 !important;
+      width: auto;
+      height: 14px;
+  }
+  .teamchart li[value] .setcell-typeicons {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      gap: 2pt;
+      left: 8px;
+      bottom: 8px;
+  }
+  /* Pokemon details input */
+  .teamchart li[value] .setcell-details{
+      position: absolute;
+      left: 8px;
+      top: calc(20px + var(--input_name_details));
+  }
+  .teamchart li[value] .setcell-details>label{
+      display: none;
+  }
+  .teamchart li[value] .setcell-details>button{
+      width: 180px;
+      border-top: 0;
+      border-radius: 0 0 20px 20px !important;
+      z-index: 0;
+  }
+  .teamchart li[value] .setcell-details>button:focus,
+  .teamchart li[value] .setcell-details>button:active {
+      margin: 1px !important;
+  }
+  /* Pokemon item and ability input */
+  .teamchart li[value] .setrow:has(.setcell-item,.setcell-ability) {
+      position: absolute;
+      left: 208px;
+      bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      max-width: 124px;
+  }
+  .teamchart li[value] .setrow:has(.setcell-item,.setcell-ability) .setcell {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  .teamchart li[value] .setrow:has(.setcell-item,.setcell-ability) input {
+      padding: 1px 0 1px 12px;
+      flex: 1 1 auto !important;
+      width: auto;
+  }
+  /* Pokemon moves */
+  .teamchart li[value] .setcol-moves {
+      --move-width: 250px;
+      position: absolute;
+      top: 4px;
+      left: 208px;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      width: var(--move-width);
+      height: 62px;
+  }
+  .teamchart li[value] .setcol-moves label {
+      display: none;
+  }
+  .teamchart li[value] .setcol-moves input {
+      padding: 1px 0 1px 12px;
+      width: calc(var(--move-width) / 2 - 1px);
+      height: 24px;
+      margin: 0 !important;
+  }
+      .teamchart li[value] .setcol-moves>.setcell:nth-child(1){
+      align-self: end;
+      justify-self: end;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(1) input {
+      border-radius: 20px 0 0 0;
+      border-bottom: 0;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(2){
+      align-self: end;
+      justify-self: start;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(2) input {
+      border-radius: 0 20px 0 0;
+      border-bottom: 0;
+      border-left: 0;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(3){
+      align-self: start;
+      justify-self: end;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(3) input {
+      border-radius: 0 0 0 20px;
+      align-self: start;
+      justify-self: end;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(4){
+      align-self: start;
+      justify-self: start;
+  }
+  .teamchart li[value] .setcol-moves>.setcell:nth-child(4) input {
+      border-radius: 0 0 20px 0;
+      border-left: 0;
+  }
+  /* Pokemon stats */
+  .teamchart li[value] .setcol-stats {
+      position: absolute;
+      left: 350px;
+      top: 74px;
+  }
+  .teamchart li[value] .setcol-stats .setrow {
+      height: 100%;
+  }
+  .teamchart li[value] .setcol-stats>.setrow>label {
+      display: none;
+  }
+  .teamchart li[value] .setcol-stats>.setrow>button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1pt;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none;
+      background-color: transparent;
+      height: auto;
+  }
+  .teamchart li[value] .setcol-stats>.setrow>button>.statrow-head {
+      display: none !important;
+  }
+  span.statgraph span {
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 0 5px 5px 0;
+  }
+  .teamchart li[value] .setcol-stats>.setrow>button span.statrow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      height: 9.3pt;
+      width: 100%;
+  }
+  .teamchart li[value] .setcol-stats>.setrow>button span.statrow>label,
+  .teamchart li[value] .setcol-stats>.setrow>button span.statrow em {
+      height: auto !important;
+  }
+
+  /* Buttons for copy/import/move/delete */
+  .teamchart li[value] .setmenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: unset;
+      width: auto;
+      z-index: 10;
+      padding-bottom: 40px;
+  }
+  .teamchart li[value] .setmenu button {
+      flex: 1 1 auto;
+      font-size: 0px;
+      border: none;
+  }
+  .teamchart li[value] .setmenu button i {
+      font-size: 10pt;
+  }
+  
+  /* Pokémon types with typeName and Icon */
+  .setcell-typeicons > img[src*= "types/Normal"] {
+      content: var(--type_name_Normal) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Fire"] {
+      content: var(--type_name_Fire) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Water"] {
+      content: var(--type_name_Water) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Electric"] {
+      content: var(--type_name_Electric) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Grass"] {
+      content: var(--type_name_Grass) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Ice"] {
+      content: var(--type_name_Ice) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Fighting"] {
+      content: var(--type_name_Fighting) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Poison"] {
+      content: var(--type_name_Poison) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Ground"] {
+      content: var(--type_name_Ground) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Flying"] {
+      content: var(--type_name_Flying) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Psychic"] {
+      content: var(--type_name_Psychic) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Bug"] {
+      content: var(--type_name_Bug) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Rock"] {
+      content: var(--type_name_Rock) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Ghost"] {
+      content: var(--type_name_Ghost) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Dragon"] {
+      content: var(--type_name_Dragon) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Dark"] {
+      content: var(--type_name_Dark) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Steel"] {
+      content: var(--type_name_Steel) !important;
+  }
+
+  .setcell-typeicons > img[src*= "types/Fairy"] {
+      content: var(--type_name_Fairy) !important;
+  }
+  
+  .setcell-typeicons > img[src*= "types/Stellar"] {
+      content: var(--type_name_Stellar) !important;
+  }
+  
+/*********************
+* Teambuilder ~end *
+**********************/
