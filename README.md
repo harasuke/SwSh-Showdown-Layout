@@ -4,6 +4,7 @@ Theme for Pokémon Showdown based on the style of Sword&amp;Shield main games.
 Supports 2023 + 2024 VGC formats. No other formats have been tested.
 
 <img width="638" alt="Screenshot 2022-12-19 at 22 41 03" src="https://user-images.githubusercontent.com/30316462/208529567-74cea360-017d-4e12-bb79-63a7715231a5.png">
+<img width="638" alt="Screenshot 2024-06-07 at 08 52 12" src="https://github.com/harasuke/SwSh-Showdown-Layout/assets/30316462/0eff19ee-81f6-4490-bad9-f35d73b27de5">
 
 ## How to use
 Use a browser extension to inject the content of "style.css"
