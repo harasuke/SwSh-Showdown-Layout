@@ -509,8 +509,7 @@ div [aria-label="Active Pokemon"] {
 
         background-color: rgba(51, 51, 51, 0.3);
     }
-    .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"])
-        .switchmenu:nth-child(3) {
+    .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu:nth-child(3) {
         top: -200px;
     }
 
@@ -533,8 +532,10 @@ div [aria-label="Active Pokemon"] {
         width: 200px;
     }
     button[name="selectMove"] {
+        /* todo background img */
     }
     button[name="selectSwitch"] {
+        /* todo background img */
     }
 
     button[name="openTimer"] {
@@ -573,18 +574,24 @@ div [aria-label="Active Pokemon"] {
         -webkit-mask-image: linear-gradient(to right, rgb(40 40 40 / 60%), transparent);
     }
     */
+    .battle {
+        width: 100vw !important;
+        transform: scaleX(1.2);
+        background-size: contain;
+    }
     .leftbar .trainer.trainer-near {
         top: -49px !important;
         grid-template-areas: "pkmn1 pkmn2 trainername";
         place-items: center;
     }
     .leftbar .trainer.trainer-near strong {
-        display: unset;
         grid-area: trainername;
+        display: flex;
     }
     .leftbar .trainer.trainer-near strong:after {
         content: "vs";
         padding-left: 30px;
+        padding-top: 5px;
         color: red;
     }
     .leftbar .trainer.trainer-near .teamicons:nth-child(1) {
@@ -592,6 +599,48 @@ div [aria-label="Active Pokemon"] {
     }
     .leftbar .trainer.trainer-near .teamicons:nth-child(2) {
         grid-area: pkmn2;
+    }
+    div [aria-label="Active Pokemon"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: 100px 224px 100px !important;
+        column-gap: 20px;
+    }
+    /* display user pokemon a bit higher to not go behind healthbar */
+    .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
+        margin: -30px 0 0 -24px !important;
+        /* Shadow support for pokemon without 3d sprites yet */
+        padding-bottom: 10px;
+        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+    }
+    /* display foes pokemon a bit to the right */
+    .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(1) img {
+        margin: -30px 0 0 12px !important;
+        /* Shadow support for pokemon without 3d sprites yet */
+        padding-bottom: 10px;
+        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+    }
+    /* fix position real time battle log */
+    .innerbattle {
+        width: 100vw !important;
+    }
+    .messagebar.message {
+        font-size: 8pt;
+        margin-bottom: 32%;
+        left: 0;
+        max-width: 280px;
+        max-height: 150px !important;
+        overflow: visible;
+    }
+    .messagebar.message p {
+        padding: 0 !important;
+    }
+    .messagebar.message small {            
+        font-size: 6pt;
+        line-height: 4pt;
+    }
+    .battle-chat-toggle.button[name=showChat] {
+        top: 24px;
+        display: block !important;
     }
 }
 
