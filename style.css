@@ -93,8 +93,8 @@
     margin-bottom: 2px;
     word-wrap: break-word;
     color: #fff;
-    text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000,
-        -1px 1px #000, -1px 0 #000;
+    text-shadow: -1px -1px #000, 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000,
+        0 1px #000, -1px 1px #000, -1px 0 #000;
 }
 
 .trainersprite {
@@ -113,9 +113,9 @@
 
 .trainer-near strong {
     /*grid-row: 1/2;
-          grid-column: 3/4;
-          justify-self: center;
-          align-self: center;*/
+      grid-column: 3/4;
+      justify-self: center;
+      align-self: center;*/
     display: none;
 }
 
@@ -124,7 +124,7 @@
     top: 330px;
 }
 
-/* Remove semi-white laterla bands*/
+/* Remove semi-white lateral bands*/
 
 .leftbar,
 .rightbar {
@@ -257,8 +257,8 @@ div [aria-label="Active Pokemon"] {
 }
 
 .statbar strong {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-        "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     display: flex;
     align-items: center;
     margin: 0;
@@ -306,13 +306,13 @@ div [aria-label="Active Pokemon"] {
     border-radius: 0px !important;
     /* border-radius: 8px 3px 10px 8px !important; */
     /* transform-style: preserve-3d;
-          transform-origin: left;
-          transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
+      transform-origin: left;
+      transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
 }
 
 .statbar .hpbar .hptext {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-        "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     position: absolute;
     color: black;
     text-align: center;
@@ -395,15 +395,15 @@ div [aria-label="Active Pokemon"] {
 .statbar span.bad {
     border-color: #4c0603;
     background: #a61000;
-    text-shadow: -1px -1px #4c0603, 0 -1px #4c0603, 1px -1px #4c0603, 1px 0 #4c0603, 1px 1px #4c0603,
-        0 1px #4c0603, -1px 1px #4c0603, -1px 0 #4c0603;
+    text-shadow: -1px -1px #4c0603, 0 -1px #4c0603, 1px -1px #4c0603, 1px 0 #4c0603,
+        1px 1px #4c0603, 0 1px #4c0603, -1px 1px #4c0603, -1px 0 #4c0603;
 }
 
 .statbar span.good {
     background: #00a636;
     border-color: #034c16;
-    text-shadow: -1px -1px #034c16, 0 -1px #034c16, 1px -1px #034c16, 1px 0 #034c16, 1px 1px #034c16,
-        0 1px #034c16, -1px 1px #034c16, -1px 0 #034c16;
+    text-shadow: -1px -1px #034c16, 0 -1px #034c16, 1px -1px #034c16, 1px 0 #034c16,
+        1px 1px #034c16, 0 1px #034c16, -1px 1px #034c16, -1px 0 #034c16;
 }
 
 @keyframes statusBlink {
@@ -458,9 +458,7 @@ div [aria-label="Active Pokemon"] {
 }
 
 /*******************/
-
 /* Battle Messages */
-
 /*******************/
 
 /*******************************************/
@@ -484,9 +482,10 @@ div [aria-label="Active Pokemon"] {
     .battle-controls:has(.controls.move-controls) .movemenu {
         display: flex !important;
         flex-direction: column-reverse;
-        align-items: center;
+        /*align-items: center;*/
+        align-items: flex-end;
         position: absolute !important;
-        top: -276px;
+        bottom: 92px;
         left: 480px;
     }
     .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu,
@@ -510,20 +509,21 @@ div [aria-label="Active Pokemon"] {
 
         background-color: rgba(51, 51, 51, 0.3);
     }
-    .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu:nth-child(3) {
+    .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"])
+        .switchmenu:nth-child(3) {
         top: -200px;
     }
 
     /* Attack button */
     .moveselect {
         position: absolute !important;
-        top: -70px;
+        top: -56px;
         left: 480px;
     }
     /* Switch button */
     .switchselect {
         position: absolute !important;
-        top: -30px;
+        top: -16px;
         left: 480px;
     }
     button[name="selectMove"],
@@ -536,13 +536,70 @@ div [aria-label="Active Pokemon"] {
     }
     button[name="selectSwitch"] {
     }
+
+    button[name="openTimer"] {
+        position: absolute !important;
+        /* top left - beside Turn counter
+        left: 150px;
+        top:-354px;
+        */
+        left: 8px;
+        top: -92px;
+    }
+
+    .ps-room .battle-controls {
+        top: 400px !important;
+    }
+    .rstatbar.leftstatbar,
+    .rstatbar.rightstatbar {
+        margin-top: -18px;
+    }
+    /*
+    div.controls {
+        background: transparent;
+    }
+    div.controls:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 26px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        
+        background: black !important;
+        -webkit-mask-image: linear-gradient(to right, rgb(40 40 40 / 60%), transparent);
+    }
+    */
+    .leftbar .trainer.trainer-near {
+        top: -49px !important;
+        grid-template-areas: "pkmn1 pkmn2 trainername";
+        place-items: center;
+    }
+    .leftbar .trainer.trainer-near strong {
+        display: unset;
+        grid-area: trainername;
+    }
+    .leftbar .trainer.trainer-near strong:after {
+        content: "vs";
+        padding-left: 30px;
+        color: red;
+    }
+    .leftbar .trainer.trainer-near .teamicons:nth-child(1) {
+        grid-area: pkmn1;
+    }
+    .leftbar .trainer.trainer-near .teamicons:nth-child(2) {
+        grid-area: pkmn2;
+    }
 }
 
 /* Finish mobile accessibility */
 
 /*****************
-      * Battle Weather *
-      *****************/
+* Battle Weather *
+*****************/
 
 .turn {
     position: absolute !important;
@@ -563,9 +620,7 @@ div [aria-label="Active Pokemon"] {
 }
 
 /***********/
-
 /* Weather */
-
 /***********/
 
 .sunweather,
@@ -645,22 +700,22 @@ div [aria-label="Active Pokemon"] {
 }
 
 /**********************
-        * Battle Weather ~end *
-        **********************/
+* Battle Weather ~end *
+**********************/
 
 .innerbattle > .rightbar + div {
     animation: none !important;
 }
 
 /********************
-        * In-Game Shadows *
-        ********************/
+* In-Game Shadows *
+********************/
 
 img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 {
     /* -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-          filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-          transform: scale3d(1, 1, 1.00001); */
+      filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
+      transform: scale3d(1, 1, 1.00001); */
     padding-bottom: 10px;
     background-image: radial-gradient(
         closest-side at 50% 90%,
@@ -671,12 +726,12 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /******************
-        * In-Game Shadows ~end *
-        ******************/
+* In-Game Shadows ~end *
+******************/
 
 /********************
-        * Move Button Types *
-        ********************/
+* Move Button Types *
+********************/
 
 .timerbutton {
     z-index: 100;
@@ -829,16 +884,14 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /*
-          .switchselect,
-          .moveselect {
-              display: none !important;
-          }
-        */
+      .switchselect,
+      .moveselect {
+          display: none !important;
+      }
+    */
 
 /**************/
-
 /* MOVE TYPES */
-
 /**************/
 
 .movemenu button.type-Ice {
@@ -1142,12 +1195,12 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /******************
-        * Move Types ~end *
-        ******************/
+* Move Types ~end *
+******************/
 
 /******************
-        * Chat Log ~start *
-      ********************/
+* Chat Log ~start *
+********************/
 
 .spacer.battle-history {
     border-top: 2px solid rgba(171, 183, 183, 0.2);
@@ -1269,8 +1322,8 @@ abbr[title]:hover::after {
 }
 
 /*********************
-      * Teambuilder ~start *
-      **********************/
+* Teambuilder ~start *
+**********************/
 .teamchart {
     display: grid;
     grid-template-areas:
