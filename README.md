@@ -1,4 +1,4 @@
-# [Ver 1.0.2 - Alpha] SwSh-Showdown-Layout
+# [Ver 1.3.0 - Beta] SwSh-Showdown-Layout
 Theme for Pokémon Showdown based on the style of Sword&amp;Shield main games.
 
 Supports 2023 + 2024 VGC formats. No other formats have been tested.
@@ -10,7 +10,7 @@ Supports 2023 + 2024 VGC formats. No other formats have been tested.
 Use a browser extension to inject the content of "style.css"
 
 ### Extensions
-[Download Stylus browser extension (_recommended_)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+[Download Stylus browser extension (_recommended_)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)  
 [Download Stylish browser extension](https://chromewebstore.google.com/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=it)
 
 #### Install Theme
