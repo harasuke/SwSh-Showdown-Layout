@@ -609,9 +609,9 @@ div [aria-label="Active Pokemon"] {
     .backdrop {
         min-width: 693px !important;
         width: 100vw !important;
-        height: 100vh !important;
         transform: scaleX(1.2);
-        background-size: contain;
+        background-size: contain !important;
+        left: 0 !important;
     }
     .leftbar .trainer.trainer-near {
         top: -49px !important;
