@@ -521,13 +521,15 @@ div [aria-label="Active Pokemon"] {
     .moveselect {
         position: absolute !important;
         top: -56px;
-        left: 550px;
+        left: 438px;
+        /*left: 550px;*/
     }
     /* Switch button */
     .switchselect {
         position: absolute !important;
-        top: -14px;
-        left: 550px;
+        top: -56px;
+        right: 24px;
+        /*left: 550px;*/
     }
     button[name="selectMove"],
     button[name="selectSwitch"] {
@@ -552,12 +554,32 @@ div [aria-label="Active Pokemon"] {
         background-image: var(--switch-button) !important;
         background-repeat: no-repeat !important;
         background-size: 35% !important;
-        background-position-x: calc(100% - 5px);
+        background-position-x: calc(100% - 5px) !important;
         background-position-y: 2px !important;
         color: black;
         text-align: left;
         background-color: white;
         border: 2px solid #82C182;
+    }
+    /* when switch pokemon is clicked */
+    div.controls switch-controls button[name="selectSwitch"] {
+        color: white !important;
+        background-color: black !important;
+    }
+    /* when switch button is clicked */
+    div.controls switch-controls button[name="selectMove"] {
+        color: black !important;
+        background-color: white !important;
+    }
+    /* when attack pokemon is clicked */
+    div.controls switch-controls button[name="selectSwitch"] {
+        color: black !important;
+        background-color: white !important;
+    }
+    /* when attack button is clicked */
+    div.controls switch-controls button[name="selectMove"] {
+        color: white !important;
+        background-color: black !important;
     }
     .whatdo {
         margin-bottom: 0;
@@ -579,7 +601,18 @@ div [aria-label="Active Pokemon"] {
     }
     .rstatbar.leftstatbar,
     .rstatbar.rightstatbar {
-        /* margin-top: 0px; */
+        align-self: end;
+        margin-bottom: 12px;
+    }
+    .rstatbar.rightstatbar {
+        justify-self: start;
+        margin-left: -24px;
+    }
+    .lstatbar.rightstatbar {
+        justify-self: end;
+    }
+    div.controls {
+        width: 100vw !important;
     }
     /*
     div.controls {
@@ -642,6 +675,7 @@ div [aria-label="Active Pokemon"] {
         grid-template-columns: repeat(3, 1fr) !important;
         grid-template-rows: 100px var(--bot-top-healthbar) 100px !important;
         column-gap: 20px;
+        width: 100vw;
     }
     /* display user pokemon a bit higher to not go behind healthbar */
     .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
@@ -836,14 +870,14 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 
 .megaevo:hover,
 .megaevo {
-    height: 65px;
+    height: auto;
     width: 50px;
     border: none;
     display: flex;
     flex-direction: column;
     background: url(https://i.imgur.com/rArM0Re.gif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 150%;
     color: transparent;
 }
 .megaevo img {
