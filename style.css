@@ -562,22 +562,22 @@ div [aria-label="Active Pokemon"] {
         border: 2px solid #82C182;
     }
     /* when switch pokemon is clicked */
-    div.controls switch-controls button[name="selectSwitch"] {
+    div.controls.switch-controls button[name="selectSwitch"] {
         color: white !important;
         background-color: black !important;
     }
     /* when switch button is clicked */
-    div.controls switch-controls button[name="selectMove"] {
+    div.controls.switch-controls button[name="selectMove"] {
         color: black !important;
         background-color: white !important;
     }
     /* when attack pokemon is clicked */
-    div.controls switch-controls button[name="selectSwitch"] {
+    div.controls.move-controls button[name="selectSwitch"] {
         color: black !important;
         background-color: white !important;
     }
     /* when attack button is clicked */
-    div.controls switch-controls button[name="selectMove"] {
+    div.controls.move-controls button[name="selectMove"] {
         color: white !important;
         background-color: black !important;
     }
