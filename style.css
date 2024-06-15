@@ -10,7 +10,10 @@
     position: absolute;
     top: -80px;
 }
-
+.backdrop {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d841b5t-d14186ca-887a-4f10-b4ca-b16d5aaff49a.jpg/v1/fit/w_800,h_480,q_70,strp/pokemon_x_and_y_wifi_battle_background_by_phoenixoflight92_d841b5t-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvMmZiMjgyMWEtMTQwNi00YTFkLTliMDQtNjY2OGYyNzhlOTQ0XC9kODQxYjV0LWQxNDE4NmNhLTg4N2EtNGYxMC1iNGNhLWIxNmQ1YWFmZjQ5YS5qcGciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.HwKC1f1i9DQGRx7gNGG09rDcVs2XQv2H73F7fI6Y-fk) !important;
+}
+    
 :root {
     --btnH: 35px;
     --whiteWidthSize: 220;
@@ -232,6 +235,21 @@ div [aria-label="Active Pokemon"] {
     margin-left: 25px !important;
 }
 
+/* display player pokemon a bit higher */
+.innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
+        margin: -40px 0 0 -24px !important;
+        /* Shadow support for pokemon without 3d sprites yet */
+        padding-bottom: 10px;
+        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+}
+/* display enemy pokemon a bit higher */
+.innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(1) img {
+        margin: -40px 0 0 0px !important;
+        /* Shadow support for pokemon without 3d sprites yet */
+        padding-bottom: 10px;
+        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+}
+    
 /* Enemy right pokemon (displayed on your left)*/
 
 .lstatbar.rightstatbar {
@@ -499,11 +517,11 @@ div [aria-label="Active Pokemon"] {
         flex-wrap: wrap;
 
         position: absolute;
-        top: -240px;
+        top: -260px;
         left: 0px;
         width: 250px;
         max-width: 250px;
-        max-height: 120px;
+        max-height: 150px;
 
         padding: 0 !important;
         margin: 0 !important;
@@ -635,9 +653,6 @@ div [aria-label="Active Pokemon"] {
     */
     .battle, .innerbattle, .weather {
         width: 100vw !important;
-    }
-    .weather {
-        transform: scaleX(1.2);
     }
     .backdrop {
         min-width: 693px !important;
@@ -850,6 +865,55 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 * In-Game Shadows ~end *
 ******************/
 
+/******************
+* Switch Pokemon ~start *
+******************/
+    
+.switchmenu button {
+    border-radius: 8px;
+    height: 40px !important;
+    width: 110px;
+    color: black;
+}
+.switchmenu button.disabled {
+    background: #B2B2B2 !important;
+    color: white !important;
+}
+.switchmenu button.disabled .status {
+    border: 1px solid black !important;
+    border-radius: 5px;
+}
+.switchmenu>span.picon {
+    opacity: 1 !important;
+}
+.switchmenu button>span.hpbar {
+    grid-area: hp;
+    margin: 4px 4px 0 4px;
+    border: 0 !important;
+    border-radius: 5px;
+    height: 6px;
+    background: black;
+    color: black;
+}
+.switchmenu button>span.hpbar>span {
+    height: 5px;
+    border-radius: 5px;
+    transform: scaleX(105%);
+}
+.switchmenu button .status {
+    border: 0 !important;
+    height: 10px !important;
+    width: 20px !important;
+    top: 5px;
+    right: 8px;
+}
+/*hsl(180,85%,45%)*/
+    
+    
+/******************
+* Switch Pokemon ~end *
+******************/
+    
 /********************
 * Move Button Types *
 ********************/
@@ -862,7 +926,8 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 .movemenu {
     position: absolute !important;
     left: 67.5%;
-    top: -277%;
+    /* top: -277%; */
+    bottom: 196px;
     display: flex !important;
     flex-direction: column-reverse;
     padding: 0;
@@ -966,6 +1031,7 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
     display: grid !important;
     grid-template-areas: "typelogo name pp";
     grid-template-columns: auto max(107px) 45px;
+    font-size: 9pt;
 }
 
 .movemenu button[disabled~="disabled"] {
