@@ -21,6 +21,9 @@ Use a browser extension to inject the content of "style.css"
 [Download for Stylus (_recommended_)](https://userstyles.world/style/16603/pokemon-swsh-layout)  
 [Download for Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
 
+#### Installing on Safari
+If you are using Safari on mac or iOS, simply install this [Shortcut](https://www.icloud.com/shortcuts/c236a26d3bcb4050aff970add1b57376), then, when you are on the Showdown page, share the page to the shortcut and it will apply the style.  
+
 ## Reference
 I took the codebase from different styles
 
