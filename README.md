@@ -1,4 +1,4 @@
-# [Ver 1.6.0 - Beta] SwSh-Showdown-Layout
+# [Ver 1.6.4 - Beta] SwSh-Showdown-Layout
 Theme for Pokémon Showdown based on the style of Sword&amp;Shield main games.
 
 Supports 2023 + 2024 VGC formats. No other formats have been tested.
@@ -34,4 +34,3 @@ HP bar + better Weather: https://userstyles.org/styles/250518/showdownmodules-su
 Gamelog Chat: https://userstyles.org/styles/180579/showdown-pro-v4-03-beta  
 
 SVG Icons: https://github.com/duiker101/pokemon-type-svg-icons
-e, go to **Share** and click on **ShowdownStyle**
