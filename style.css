@@ -10,9 +10,17 @@
     position: absolute;
     top: -80px;
 }
-/* battlefield background image */
+/*
+    Battlefield background image rendered by me.
+    Battleplane image created by me.
+    Background Battle Stadium 3d Model Information:
+        source:	https://sketchfab.com/3d-models/pokemon-stadium-c7ae71285d404b9fb390dbe7cd14e57d
+        author:	Tigerar1 (https://sketchfab.com/allanromanreyes)
+*/
 .backdrop {
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d841b5t-d14186ca-887a-4f10-b4ca-b16d5aaff49a.jpg/v1/fit/w_800,h_480,q_70,strp/pokemon_x_and_y_wifi_battle_background_by_phoenixoflight92_d841b5t-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvMmZiMjgyMWEtMTQwNi00YTFkLTliMDQtNjY2OGYyNzhlOTQ0XC9kODQxYjV0LWQxNDE4NmNhLTg4N2EtNGYxMC1iNGNhLWIxNmQ1YWFmZjQ5YS5qcGciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.HwKC1f1i9DQGRx7gNGG09rDcVs2XQv2H73F7fI6Y-fk) !important;
+    background-image: url(https://i.ibb.co/G059m4C/battleground.png) !important;
+    background-position-x: -10px;
+    background-position-y: -10px;
 }
 
 :root {
@@ -242,6 +250,16 @@ div [aria-label="Active Pokemon"] {
     margin-left: 25px !important;
 }
 
+/* player left/right pokemon tooltip area must be higher */
+.innerbattle .tooltips .has-tooltip[data-id="p1a"] {
+    left: 100px !important;
+    top: 120px !important;
+}
+.innerbattle .tooltips .has-tooltip[data-id="p1b"] {
+    left: 225px !important;
+    top: 150px !important;
+}
+
 /* display player pokemon a bit higher */
 .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
         margin: -40px 0 0 -24px !important;
@@ -255,6 +273,14 @@ div [aria-label="Active Pokemon"] {
         /* Shadow support for pokemon without 3d sprites yet */
         padding-bottom: 10px;
         background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+}
+
+/* Fix protect layer positon for player
+    .innerbattle div:nth-child(5) div:nth-child(3) .turnstatus-protect 
+*/
+/* Fix protect layer positon for enemy */
+.innerbattle div:nth-child(5) div:nth-child(2) .turnstatus-protect {
+    margin: -35px 0 0 -10px;
 }
 
 /* Enemy right pokemon (displayed on your left)*/
@@ -273,6 +299,14 @@ div [aria-label="Active Pokemon"] {
     clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
 }
 
+/* enemy left/right pokemon tooltip area fix */
+.innerbattle .tooltips .has-tooltip[data-id="p2a"] {
+    margin: -40px 0 0 0;
+}
+.innerbattle .tooltips .has-tooltip[data-id="p2b"] {
+    margin: -40px 0 0 -10px;
+}
+
 .lstatbar.rightstatbar strong,
 .lstatbar.rightstatbar .hpbar,
 .lstatbar.leftstatbar strong,
@@ -289,6 +323,7 @@ div [aria-label="Active Pokemon"] {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
         Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
     color: black;
@@ -313,13 +348,15 @@ div [aria-label="Active Pokemon"] {
     margin-right: auto;
 }
 
+/* pokemon gender male */
 .statbar img[alt~="M"] {
     content: url("https://i.imgur.com/qZTiMw3.png");
     width: 13px;
     height: 13px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
+/* pokemon gender female */
 .statbar img[alt~="F"] {
     content: url(https://i.imgur.com/aAyWAi2.png);
     width: 13px;
@@ -400,15 +437,26 @@ div [aria-label="Active Pokemon"] {
 
 .statbar .status {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     min-height: 10px;
     font-size: 8pt;
     color: #fff;
     text-transform: uppercase;
     position: absolute;
-    width: 135px;
+    width: 205px;
+    margin-left: -40px;
+    margin-top: -2px;
     transform: rotateY(48deg) translate(57px, 3px) scale(0.8);
+}
+
+/* Used for teratype name image */
+.statbar .status img {
+    display: none;
+}
+
+.statbar .status .neutral {
+    color: black !important;    
 }
 
 .statbar span {
@@ -418,6 +466,7 @@ div [aria-label="Active Pokemon"] {
 
 .statbar span.bad,
 .statbar span.good {
+    font-size: 9pt;
     margin: -1px 1px;
 }
 
@@ -489,6 +538,24 @@ div [aria-label="Active Pokemon"] {
 /*******************/
 /* Battle Messages */
 /*******************/
+
+.messagebar.message {
+    font-size: 8pt;
+    margin-bottom: 12%;
+    left: 370px;
+    width: 250px;
+    max-width: 300px;
+    max-height: 130px !important;
+    overflow: visible;
+}
+.messagebar.message p {
+    padding: 0 !important;
+}
+.messagebar.message small {            
+    font-size: 6pt;
+    line-height: 4pt;
+}
+
 
 /*******************************************/
 /* Battle Settings for mobile accessibility*/
