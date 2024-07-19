@@ -129,6 +129,7 @@
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 30px;
+    height: 32px;
 }
 
 /* Player pokemon icons */
@@ -260,6 +261,26 @@ div [aria-label="Active Pokemon"] {
     top: 150px !important;
 }
 
+/* Fix pokemon sprites positon for double battles */
+/* enemy right side (view on left) */
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:nth-child(1) {
+    transform-origin: center;
+    transform: translateX(-10px);
+}
+/* enemy left side (view on right) */
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:last-child {
+    transform-origin: center;
+    transform: translateX(15px);
+}
+/* player left side */
+.innerbattle div:nth-child(5) div:nth-child(4):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:nth-child(1) {
+}
+/* player right side */
+.innerbattle div:nth-child(5) div:nth-child(4):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:last-child {
+    transform-origin: center;
+    transform: translateX(30px) translateY(-10px);
+}
+
 /* Fix position full enemy team preview */
 .innerbattle div:nth-child(5) div:nth-child(1):has(img[src$=".gif"]:nth-child(3)~img) > img {
     margin: -10px 0 0 50px !important;
@@ -287,12 +308,25 @@ div [aria-label="Active Pokemon"] {
         background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
 }
 
-/* Fix protect layer positon for player
-    .innerbattle div:nth-child(5) div:nth-child(3) .turnstatus-protect 
-*/
+/* Fix protect layer positon for player */
+.innerbattle div:nth-child(5) div:nth-child(3) .turnstatus-protect {
+    margin: -45px 0 0 0;
+    transform-origin: center;
+    transform: rotate(4deg) rotate3d(0, 1, 0, -35deg) rotate3d(1, 0, 0, -10deg) scaleX(1.2);
+}
+/* Fix lightscreen position for player */
+.innerbattle div:nth-child(5) div:nth-child(3) .sidecondition-lightscreen,
+.innerbattle div:nth-child(5) div:nth-child(3) .sidecondition-reflect,
+.innerbattle div:nth-child(5) div:nth-child(3) .sidecondition-auroraveil
+{
+    margin: -45px 0 0 25px;
+    transform-origin: center;
+    transform: rotate(4deg) rotate3d(0, 1, 0, -35deg) rotate3d(1, 0, 0, -10deg) scaleX(2.3) scaleY(1.4);
+}
 /* Fix protect layer positon for enemy */
 .innerbattle div:nth-child(5) div:nth-child(2) .turnstatus-protect {
-    margin: -35px 0 0 -10px;
+    margin: -25px 0 0 30px;
+    transform: rotate(3deg) rotate3d(0, 1, 0, -30deg) rotate3d(1, 0, 0, -10deg) scaleX(1.2);
 }
 
 /* Enemy right pokemon (displayed on your left)*/
@@ -313,10 +347,10 @@ div [aria-label="Active Pokemon"] {
 
 /* enemy left/right pokemon tooltip area fix */
 .innerbattle .tooltips .has-tooltip[data-id="p2a"] {
-    margin: -40px 0 0 0;
+    margin: -40px 0 0 30px;
 }
 .innerbattle .tooltips .has-tooltip[data-id="p2b"] {
-    margin: -40px 0 0 -10px;
+    margin: -40px 0 0 -30px;
 }
 
 .lstatbar.rightstatbar strong,
@@ -557,8 +591,7 @@ div [aria-label="Active Pokemon"] {
     left: 370px;
     width: 250px;
     max-width: 300px;
-    max-height: 130px !important;
-    overflow: visible;
+    overflow: auto;
 }
 .messagebar.message p {
     padding: 0 !important;
@@ -861,7 +894,7 @@ div [aria-label="Active Pokemon"] {
     background-size: cover;
     color: #0044bb;
     text-shadow: #ffffff 1px 1px 0, #ffffff 1px -1px 0, #ffffff -1px 1px 0, #ffffff -1px -1px 0;
-    opacity: 0.8 !important;
+    opacity: 0.6 !important;
 }
 
 .sandstormweather {
@@ -903,13 +936,30 @@ div [aria-label="Active Pokemon"] {
     background: url(https://pkmn.pro/resources/terrain-psychic.png) scroll left top;
     background-size: cover;
     opacity: 0.6 !important;
+    transform: scale(1.2)
 }
 
-.pseudoweather {
-    background: url(http://play.pokemonshowdown.com/fx/weather-trickroom.png) scroll left top;
-    background-size: cover;
-    opacity: 0.6 !important;
+@keyframes trickroom-animation {
+    from {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 0.2;
+    }
 }
+
+.weather.trickroomweather {
+    /* http://play.pokemonshowdown.com/fx/weather-trickroom.png */
+    background: url(https://i.ibb.co/dtvvX37/trickroom-output.png) scroll left top;
+    background-size: cover;
+    background-position-x: -10px;
+    background-position-y: -4px;
+    animation: trickroom-animation 4s infinite cubic-bezier(0.01, 0.48, 0.99, 0.52);
+}
+
 
 .weather em {
     position: absolute !important;
