@@ -260,6 +260,18 @@ div [aria-label="Active Pokemon"] {
     top: 150px !important;
 }
 
+/* Fix position full enemy team preview */
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src$=".gif"]:nth-child(3)~img) > img {
+    margin: -10px 0 0 50px !important;
+}
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src$=".gif"]:nth-child(3)~img) > div {
+    margin: 0px 0 0 50px !important;
+}
+/* Fix position full player team preview  */
+.innerbattle div:nth-child(5) div:nth-child(4):has(img[src$=".gif"]:nth-child(3)~img) > div {
+    margin: -10px 0 0 -50px !important;
+}
+
 /* display player pokemon a bit higher */
 .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
         margin: -40px 0 0 -24px !important;
