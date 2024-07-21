@@ -360,7 +360,7 @@ div [aria-label="Active Pokemon"] {
 }
 /* Fix protect layer positon for enemy */
 .innerbattle div:nth-child(5) div:nth-child(2) .turnstatus-protect {
-    margin: -25px 0 0 30px;
+    margin: -25px 0 0 0;
     transform: rotate(3deg) rotate3d(0, 1, 0, -30deg) rotate3d(1, 0, 0, -10deg) scaleX(1.2);
 }
 
@@ -378,6 +378,15 @@ div [aria-label="Active Pokemon"] {
     grid-column: 3/4 !important;
     grid-row: 1/2 !important;
     clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
+}
+
+.innerbattle div:nth-child(5) div:nth-child(2) .sidecondition-lightscreen,
+.innerbattle div:nth-child(5) div:nth-child(2) .sidecondition-reflect,
+.innerbattle div:nth-child(5) div:nth-child(2) .sidecondition-auroraveil
+{
+    margin: -20px 0 0 -20px;
+    transform-origin: center;
+    transform: rotate(4deg) rotate3d(0, 1, 0, -35deg) rotate3d(1, 0, 0, -10deg) scaleX(2.3) scaleY(1.4);
 }
 
 /* enemy left/right pokemon tooltip area fix */
