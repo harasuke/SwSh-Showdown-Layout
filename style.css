@@ -29,6 +29,8 @@
     --whiteHeightSize: 55;
     --wV_val: calc(var(--whiteWidthSize) * 1px);
     --wH_val: calc(var(--whiteHeightSize) * 1px);
+    /* teambuilder room colors */
+    --bg_color_teambuilder: rgba(51,51,51,0.1);
     /*Colors of types*/
     --Bug: rgb(173, 185, 68);
     --Dark: rgb(61, 61, 61);
@@ -93,6 +95,39 @@
     --statusMoveIcon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!-- Created with Vectornator (http://vectornator.io/) --><svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="46.4616 57.8678 47.9915 34.3407" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><clipPath id="ArtboardFrame"><rect height="34.3407" width="47.9915" x="46.4616" y="57.8678"/></clipPath><g clip-path="url(%23ArtboardFrame)" id="Layer" vectornator:layerName="Layer"><path d="M78.6758 58.3766C74.4394 58.272 69.7042 59.1006 64.9735 60.9385C52.3584 65.8396 44.5888 76.1198 47.6153 83.9101C50.6419 91.7003 63.3261 94.0503 75.9411 89.1492C88.5562 84.2481 96.3259 73.9391 93.2993 66.1489C91.4077 61.28 85.7366 58.5509 78.6758 58.3766ZM77.8122 59.7871C78.1482 59.7975 78.4333 59.8789 78.7622 59.9022C77.7988 60.4722 72.4477 63.7155 71.1626 67.3003C69.7605 71.2117 71.6666 74.0871 73.0049 76.0514C74.3433 78.0157 75.2975 82.7612 72.3716 86.4433C70.5047 88.7928 67.6341 89.6941 65.4053 90.1855C57.9635 90.5795 51.7479 88.0524 49.8031 83.0465C47.0184 75.8787 54.0005 66.4921 65.4053 62.0612C69.6821 60.3996 73.9728 59.6682 77.8122 59.7871Z" fill="%23000000" fill-rule="nonzero" opacity="1" stroke="%23000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1" vectornator:layerName="NewStatus"/></g></svg>');
     --physicalMoveIcon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!-- Created with Vectornator (http://vectornator.io/) --><svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="45.5849 57.4751 50.7882 35.9012" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><clipPath id="ArtboardFrame"><rect height="35.9012" width="50.7882" x="45.5849" y="57.4751"/></clipPath><g clip-path="url(%23ArtboardFrame)" id="Layer" vectornator:layerName="Layer"><path d="M77.9653 61.2083L79.328 67.5814L89.1953 65.4303L83.5717 72.0739L90.602 75.4217L80.5956 77.4961L80.3362 85.0992L71.66 82.2248L63.1877 89.1921L61.9138 82.0918L51.2545 84.7377L57.4974 78.4887L51.2107 75.4621L61.2585 71.6514L61.1945 65.5103L70.5 67.7947L77.9653 61.2083ZM70.2566 65L58.8893 63.0878L58.24 71.2493L45.5849 75.6139L54.2997 79.1051L46.3377 87.1875L60.3257 85.413L60.7835 93.3762L72.5087 84.3963L82.6754 87.3732L82.8943 79.3181L96.3731 75.3095L86.8492 71.117L94.2985 61.6062L81.4869 65L80.2293 57.4751L70.2566 65Z" fill="%23000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="NewPhysical"/></g></svg>');
     --specialMoveIcon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!-- Created with Vectornator (http://vectornator.io/) --><svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="46.2954 59.0549 45.5282 29.3228" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><clipPath id="ArtboardFrame"><rect height="29.3228" width="45.5282" x="46.2954" y="59.0549"/></clipPath><g clip-path="url(%23ArtboardFrame)" id="Layer" vectornator:layerName="Layer"><path d="M72.25 70.6562C71.129 70.4953 69.7188 70.6406 68.2812 71.1562C65.4062 72.1875 63.5165 74.259 64.0625 75.7812C64.6085 77.3035 67.3749 77.7187 70.25 76.6875C73.1251 75.6563 75.0148 73.5848 74.4688 72.0625C74.1957 71.3013 73.371 70.8172 72.25 70.6562ZM71.375 71.25C72.2294 71.4317 72.8883 71.8712 73.125 72.5312C73.5985 73.8513 72.259 75.5471 70.125 76.3125C67.991 77.0779 65.8797 76.6326 65.4062 75.3125C64.9328 73.9924 66.2722 72.2967 68.4062 71.5312C69.4733 71.1485 70.5206 71.0683 71.375 71.25ZM71.5312 64.9688C69.8141 65.1067 68.0409 65.4644 66.2812 66.0312C59.2428 68.2988 53.6294 74.3889 55.25 78.6562C56.8706 82.9237 64.7552 84.1481 72.4688 81.2188C80.1823 78.2895 85.7118 71.7507 83.1875 68.4375C81.2943 65.9526 76.6828 64.5548 71.5312 64.9688ZM71.125 66.625C75.2996 66.2895 79.0283 67.4238 80.5625 69.4375C82.6081 72.1224 78.1257 77.4075 71.875 79.7812C65.6243 82.155 59.2508 81.1456 57.9375 77.6875C56.6242 74.2294 61.1714 69.3063 66.875 67.4688C68.3009 67.0094 69.7335 66.7368 71.125 66.625ZM74.9375 59.0625C72.1481 59.1227 69.1522 59.5313 66.125 60.375C54.0161 63.7498 44.5669 74.6295 46.5625 80.875C48.5581 87.1205 63.3145 90.9559 74.6875 86.3438C86.0605 81.7316 93.4956 72.8705 91.5 66.625C90.0033 61.9409 83.3056 58.8819 74.9375 59.0625ZM74.7812 60.9062C82.315 60.907 87.9952 63.9752 89.2812 68C90.996 73.3665 84.3495 80.166 73.4375 84.6875C62.5255 89.209 51.4335 85.2727 49.7188 79.9062C48.004 74.5398 55.4309 65.0191 66.75 62C69.5798 61.2452 72.27 60.906 74.7812 60.9062Z" fill="%23000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 8"/></g></svg>');
+}
+
+.logo {
+    content: url(https://i.ibb.co/tqdRk2K/Showdown-Logo.png) !important;
+    height: 45px;
+    width: 45px;
+}
+.tabbar.maintabbar {
+    margin-left: 55px;
+}
+
+.usercount {
+    background: url(https://i.imgur.com/wY506Md.png) !important;
+    padding-left: 200px;
+    margin-left: -200px;
+    padding-top: 200px;
+    margin-top: -200px;
+    transform: translate(107px, 105px) scale(0.35)
+}
+.usercount:hover {
+    background: url(https://i.imgur.com/JGiXpTw.gif) !important;
+}
+
+.battlecount {
+    background: url(https://i.imgur.com/ziODQpd.png) !important;
+    padding-left: 200px;
+    margin-left: -200px;
+    padding-top: 200px;
+    margin-top: -200px;
+    transform: translate(107px, 115px) scale(0.35)
+}
+.battlecount:hover {
+    background: url(https://i.imgur.com/WqKmpID.gif) !important;
 }
 
 @font-face {
@@ -1643,6 +1678,151 @@ abbr[title]:hover::after {
     letter-spacing: 0.3px;
     border: none;
 }
+
+/*********************
+* Teamselect ~start *
+**********************/
+@media (prefers-color-scheme: light) {
+    .ps-room[id="room-teambuilder"] {
+        --bg_color_teambuilder: rgba(51,51,51,0.1);
+        background: rgba(245,245,245, .8) !important;
+    }
+    div.team[name="edit"] {
+        --teampreview_box: rgb(255,255,255);
+        
+        --teampreview_box_shadow1: rgba(0,0,0,0.12);
+        --teampreview_box_shadow2: rgba(0,0,0,0.24);
+        
+        --teampreview_box_shadow_over1: rgba(0,0,0,0.16);
+        --teampreview_box_shadow_over2: rgba(0,0,0,0.23);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .ps-room[id="room-teambuilder"] {
+        --bg_color_teambuilder: rgba(51,51,51,1);
+        background: rgba(20,20,20, .8) !important;
+    }
+    div.team[name="edit"] {
+        --teampreview_box: gray;
+        
+        --teampreview_box_shadow1: rgba(255,255,255,0.12);
+        --teampreview_box_shadow2: rgba(255,255,255,0.24);
+        
+        --teampreview_box_shadow_over1: rgba(255,255,255,0.16);
+        --teampreview_box_shadow_over2: rgba(255,255,255,0.23);
+    }
+    .selectFolder,
+    .selectFolder>i {
+        color: black !important;
+    }
+}
+.folder,
+.folderlist,
+.folderlistafter:before,
+.folderlistbefore:before {
+    border: none;
+    background-color: var(--bg_color_teambuilder) !important;
+}
+.folder h3,
+.foldersep:before {
+    border: none;
+    background-color: rgba(0,0,0,0) !important;
+}
+.foldersep {
+    border: none !important;
+    background-color: var(--bg_color_teambuilder) !important;
+}
+.folderpane {
+    border-left: 5px solid rgba(51,51,51,0.2) !important;
+}
+
+.selectFolder {
+    display: flex !important;
+    align-items: center;
+    
+    padding: 4px !important;
+    margin: 4px 0 4px 0 !important;
+    
+    text-wrap: wrap;
+    text-overflow: ellipsis;
+    
+    background-color: white !important;
+    border-radius: 50px !important;
+    border: none !important;
+}
+.selectFolder>i {
+    padding: 4px !important;
+}
+.selectFolder:has(i.fa-folder-open-o) {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(232,0,255,1) 100%) !important;
+}
+
+div.team[name="edit"] {
+    height: auto;        
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    background: var(--teampreview_box) !important;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px var(--teampreview_box_shadow1), 0 1px 2px var(--teampreview_box_shadow2);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+div.team[name="edit"]:hover {
+    box-shadow: 0 3px 6px var(--teampreview_box_shadow_over1), 0 3px 6px var(--teampreview_box_shadow_over2);
+}
+
+div.team[name="edit"] strong {
+    text-wrap: wrap;
+}
+div.team[name="edit"] small span.picon {
+    margin-top: 4px;
+}
+div.team[name="edit"]:hover small span.picon {
+    animation: jump-icons 1s infinite forwards;
+}
+div.team[name="edit"] small span.picon:nth-child(2) {
+    animation-delay: .6s;
+    -webkit-animation-delay: .6s;
+}
+div.team[name="edit"] small span.picon:nth-child(3) {
+    animation-delay: .4s;
+    -webkit-animation-delay: .4s;
+}
+div.team[name="edit"] small span.picon:nth-child(4) {
+    animation-delay: .1s;
+    -webkit-animation-delay: .1s;
+}
+div.team[name="edit"] small span.picon:nth-child(5) {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+div.team[name="edit"] small span.picon:nth-child(6) {
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+}
+
+@keyframes jump-icons {
+    0% {
+        margin-top: 0px;
+    }
+    49% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 4px;
+    }
+    99% {
+        margin-top: 4px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+/*********************
+* Teambuilder ~end *
+**********************/
 
 /*********************
 * Teambuilder ~start *
