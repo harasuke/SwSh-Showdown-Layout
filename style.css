@@ -810,8 +810,9 @@ div [aria-label="Active Pokemon"] {
         left: 8px !important;
         bottom: calc(100% + 8px) !important;
     }
-    .whatdo {
-        font-size: .8em !important;
+    .whatdo,
+    .controls p {
+        font-size: 1em !important;
     }
     /* Open timer when every move has been selected */
     .controls>p>button[name="openTimer"] {
