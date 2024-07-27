@@ -11,24 +11,28 @@
     top: -80px;
 }
 /*
-    Battlefield background image rendered by me.
-    Battleplane image created by me.
-    Background Battle Stadium 3d Model Information:
-        source:	https://sketchfab.com/3d-models/pokemon-stadium-c7ae71285d404b9fb390dbe7cd14e57d
-        author:	Tigerar1 (https://sketchfab.com/allanromanreyes)
+Battlefield background image rendered by me.
+Battleplane image created by me.
+Background Battle Stadium 3d Model Information:
+source:	https://sketchfab.com/3d-models/pokemon-stadium-c7ae71285d404b9fb390dbe7cd14e57d
+author:	Tigerar1 (https://sketchfab.com/allanromanreyes)
 */
 .backdrop {
     background-image: url(https://i.ibb.co/G059m4C/battleground.png) !important;
-    background-position-x: -10px;
-    background-position-y: -10px;
+    background-position-x: -60px;
+    background-position-y: -60px;
+    width: var(--battlescreen-width) !important;
+    height: var(--battlescreen-height) !important;
+    top: -50px !important;
+    left: 0 !important;
 }
 
 :root {
     --btnH: 35px;
-    --whiteWidthSize: 220;
-    --whiteHeightSize: 55;
-    --wV_val: calc(var(--whiteWidthSize) * 1px);
-    --wH_val: calc(var(--whiteHeightSize) * 1px);
+    --whiteHealthWidth: 220px;
+    --whiteHealthHeight: 55px;
+    --battlescreen-width: 640px;
+    --battlescreen-height: 410px;
     /* teambuilder room colors */
     --bg_color_teambuilder: rgba(51,51,51,0.1);
     /*Colors of types*/
@@ -171,9 +175,9 @@
 
 .trainer-near strong {
     /*grid-row: 1/2;
-      grid-column: 3/4;
-      justify-self: center;
-      align-self: center;*/
+    grid-column: 3/4;
+    justify-self: center;
+    align-self: center;*/
     display: none;
 }
 
@@ -204,7 +208,8 @@
 .rightbar .trainer-far {
     position: absolute !important;
     top: -50px !important;
-    left: -200px;
+    left: -305px;
+    width: calc(var(--battlescreen-width) / 2 - 16px);
 }
 
 .trainer-far strong {
@@ -242,18 +247,16 @@
 .statbar.rstatbar {
     /* White background with cutted right edge */
     padding-right: 0;
-    width: var(--wV_val);
-    height: var(--wH_val);
+    width: var(--whiteHealthWidth);
+    height: var(--whiteHealthHeight);
     background-color: white;
 }
 
 div [aria-label="Active Pokemon"] {
+    width: var(--battlescreen-width) !important;
+    height: var(--battlescreen-height) !important;
     position: absolute !important;
     top: -50px;
-    display: grid !important;
-    grid-template-columns: repeat(3, 193px) !important;
-    grid-template-rows: 100px 224px 100px !important;
-    column-gap: 20px;
 }
 
 .rstatbar.rightstatbar,
@@ -261,24 +264,30 @@ div [aria-label="Active Pokemon"] {
 .lstatbar.rightstatbar,
 .lstatbar.leftstatbar {
     position: relative !important;
-    inset: 0px 0px 0px 0px !important;
+    /* inset: 0px 0px 0px 0px !important; */
     align-self: start;
 }
 
 /* Player left pokemon */
 
 .rstatbar.leftstatbar {
-    grid-column: 1/2 !important;
-    grid-row: 3/4 !important;
+    /*clip-path: polygon(30px 0px, 0px var(--whiteHealthHeight), 190px var(--whiteHealthHeight), var(--whiteHealthHeight) 0px) !important;
+    position: absolute !important;
+    margin-left: calc(100% - var(--whiteHealthWidth) * 2 + 16px) !important;
+    top: 0 !important;*/
     clip-path: polygon(0px 0px, 0px 75px, 180px 75px, 210px 0px) !important;
+    position: absolute !important;
+    top: calc(var(--battlescreen-height) - var(--whiteHealthHeight) - 32px) !important;
+    left: 0 !important;
 }
 
 /* Player rightpokemon*/
 
 .rstatbar.rightstatbar {
-    grid-column: 2/3 !important;
-    grid-row: 3/4 !important;
     clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
+    position: absolute !important;
+    top: calc(var(--battlescreen-height) - var(--whiteHealthHeight) - 32px) !important;
+    left: calc(var(--whiteHealthWidth) - 24px) !important;
 }
 
 .rstatbar.rightstatbar strong,
@@ -295,20 +304,24 @@ div [aria-label="Active Pokemon"] {
     left: 225px !important;
     top: 150px !important;
 }
+.tooltipinner {
+    z-index: 100;
+}
 
 /* Fix pokemon sprites positon for double battles */
 /* enemy right side (view on left) */
 .innerbattle div:nth-child(5) div:nth-child(1):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:nth-child(1) {
     transform-origin: center;
-    transform: translateX(-10px);
+    transform: translateX(0px);
 }
 /* enemy left side (view on right) */
 .innerbattle div:nth-child(5) div:nth-child(1):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:last-child {
     transform-origin: center;
-    transform: translateX(15px);
+    transform: translateX(20px);
 }
 /* player left side */
 .innerbattle div:nth-child(5) div:nth-child(4):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:nth-child(1) {
+    transform: translateX(-10px);
 }
 /* player right side */
 .innerbattle div:nth-child(5) div:nth-child(4):has(img[src^="https://play.pokemonshowdown.com/sprites/"]:nth-child(1)~img) img:last-child {
@@ -330,17 +343,17 @@ div [aria-label="Active Pokemon"] {
 
 /* display player pokemon a bit higher */
 .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
-        margin: -40px 0 0 -24px !important;
-        /* Shadow support for pokemon without 3d sprites yet */
-        padding-bottom: 10px;
-        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+    margin: -40px 0 0 -24px !important;
+    /* Shadow support for pokemon without 3d sprites yet */
+    padding-bottom: 10px;
+    background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
 }
 /* display enemy pokemon a bit higher */
 .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(1) img {
-        margin: -40px 0 0 0px !important;
-        /* Shadow support for pokemon without 3d sprites yet */
-        padding-bottom: 10px;
-        background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
+    margin: -40px 0 0 0px !important;
+    /* Shadow support for pokemon without 3d sprites yet */
+    padding-bottom: 10px;
+    background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
 }
 
 /* Fix protect layer positon for player */
@@ -364,20 +377,22 @@ div [aria-label="Active Pokemon"] {
     transform: rotate(3deg) rotate3d(0, 1, 0, -30deg) rotate3d(1, 0, 0, -10deg) scaleX(1.2);
 }
 
-/* Enemy right pokemon (displayed on your left)*/
+/* Enemy right pokemon (displayed on your left) */
 
 .lstatbar.rightstatbar {
-    grid-column: 2/3 !important;
-    grid-row: 1/2 !important;
-    clip-path: polygon(30px 0px, 0px 75px, 180px 75px, 220px 0px) !important;
+    clip-path: polygon(30px 0px, 0px var(--whiteHealthHeight), 190px var(--whiteHealthHeight), var(--whiteHealthWidth) 0px) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: calc(var(--battlescreen-width) - var(--whiteHealthWidth) * 2 + 16px) !important;
 }
 
-/* Enemy left pokemon (displayed on your right)*/
+/* Enemy left pokemon (displayed on your right) */
 
 .lstatbar.leftstatbar {
-    grid-column: 3/4 !important;
-    grid-row: 1/2 !important;
-    clip-path: polygon(30px 0px, 0px 75px, 220px 75px, 250px 0px) !important;
+    clip-path: polygon(30px 0px, 0px var(--whiteHealthHeight), var(--whiteHealthWidth) var(--whiteHealthHeight), var(--whiteHealthWidth) 0px) !important;
+    position: absolute !important;
+    left: calc(var(--battlescreen-width) - var(--whiteHealthWidth)) !important;
+    top: 0 !important;
 }
 
 .innerbattle div:nth-child(5) div:nth-child(2) .sidecondition-lightscreen,
@@ -394,7 +409,7 @@ div [aria-label="Active Pokemon"] {
     margin: -40px 0 0 30px;
 }
 .innerbattle .tooltips .has-tooltip[data-id="p2b"] {
-    margin: -40px 0 0 -30px;
+    margin: -40px 0 0 0px;
 }
 
 .lstatbar.rightstatbar strong,
@@ -462,8 +477,8 @@ div [aria-label="Active Pokemon"] {
     border-radius: 0px !important;
     /* border-radius: 8px 3px 10px 8px !important; */
     /* transform-style: preserve-3d;
-      transform-origin: left;
-      transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
+    transform-origin: left;
+    transform: perspective( 380px ) rotateY( -48deg ) translateX(-3px); */
 }
 
 .statbar .hpbar .hptext {
@@ -659,6 +674,15 @@ div [aria-label="Active Pokemon"] {
         padding: 0;
         margin: 0;
     }
+    .rstatbar.leftstatbar {
+        top: calc(var(--battlescreen-height) - var(--whiteHealthHeight) - 24px) !important;
+        left: 0 !important;
+    }
+    .rstatbar.rightstatbar {
+        top: calc(var(--battlescreen-height) - var(--whiteHealthHeight) - 24px) !important;
+    left: calc(var(--whiteHealthWidth) - 24px) !important;
+    }
+
     /* For move/switch selector the Attack/Switch buttons change the class of parent div and set "switch-controls or move-controls" respectively */
     .battle-controls:not(.switch-controls):not(.move-controls) .movemenu,
     .battle-controls:not(.switch-controls):not(.move-controls) .switchmenu {
@@ -670,8 +694,9 @@ div [aria-label="Active Pokemon"] {
         /*align-items: center;*/
         align-items: flex-end;
         position: absolute !important;
-        bottom: 92px;
-        left: 480px;
+        bottom: -24px;
+        left: 450px;
+        transform: scale(.8);
     }
     .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu,
     .battle-controls:has(.controls.switch-controls) .switchmenu {
@@ -680,7 +705,7 @@ div [aria-label="Active Pokemon"] {
         flex-wrap: wrap;
 
         position: absolute;
-        top: -260px;
+        top: -200px;
         left: 0px;
         width: 250px;
         max-width: 250px;
@@ -695,28 +720,28 @@ div [aria-label="Active Pokemon"] {
         background-color: rgba(51, 51, 51, 0.3);
     }
     .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu:nth-child(3) {
-        top: -200px;
+        top: -156px;
     }
 
     /* Attack button */
     .moveselect {
         position: absolute !important;
-        top: -56px;
-        left: 438px;
+        bottom: calc(var(--whiteHealthHeight) * -1 + 8px);
+        left: 410px;
         /*left: 550px;*/
     }
     /* Switch button */
     .switchselect {
         position: absolute !important;
-        top: -56px;
-        right: 24px;
+        bottom: calc(var(--whiteHealthHeight) * -1 + 8px);
+        left: 526px;
         /*left: 550px;*/
     }
     button[name="selectMove"],
     button[name="selectSwitch"] {
         border: 3px solid black;
         border-radius: 50px !important;
-        width: 130px;
+        width: 110px;
         height: 40px !important;
         font-style: normal;
     }
@@ -725,7 +750,7 @@ div [aria-label="Active Pokemon"] {
         background-repeat: no-repeat !important;
         background-position: right !important;
         background-size: 50% !important;
-        background-position-y: -20px !important;
+        background-position-y: -12px !important;
         text-align: left;
         color: white;
         background-color: black !important;
@@ -734,9 +759,9 @@ div [aria-label="Active Pokemon"] {
     button[name="selectSwitch"] {
         background-image: var(--switch-button) !important;
         background-repeat: no-repeat !important;
-        background-size: 35% !important;
+        background-size: 32% !important;
         background-position-x: calc(100% - 5px) !important;
-        background-position-y: 2px !important;
+        background-position-y: 1px !important;
         color: black;
         text-align: left;
         background-color: white;
@@ -767,14 +792,20 @@ div [aria-label="Active Pokemon"] {
         padding: 0 !important;
     }
 
-    button[name="openTimer"] {
+    .whatdo>button[name="openTimer"] {
         position: absolute !important;
         /* top left - beside Turn counter
         left: 150px;
         top:-354px;
         */
-        left: 8px;
-        bottom: 92px;
+        left: 8px !important;
+        bottom: calc(var(--whiteHealthHeight) - 16px);
+    }
+    /* Open timer when every move has been selected */
+    .controls>p>button[name="openTimer"] {
+        position: absolute !important;
+        bottom: calc(var(--whiteHealthHeight) + 36px) !important;
+        left: 8px !important;
     }
 
     .ps-room .battle-controls {
@@ -787,43 +818,47 @@ div [aria-label="Active Pokemon"] {
     }
     .rstatbar.rightstatbar {
         justify-self: start;
-        margin-left: -24px;
     }
     .lstatbar.rightstatbar {
         justify-self: end;
     }
-    div.controls {
-        width: 100vw !important;
-    }
-    /*
+    
     div.controls {
         background: transparent;
+        bottom: calc(var(--whiteHealthHeight) + 8px)!important;
     }
+    div.controls .whatdo {
+        background: linear-gradient(to right, black, transparent, transparent) !important;
+        margin: 0 0 0 -8px !important;
+        padding: 0 8px 0 8px !important;
+    }
+    .controls:not(:has(.whatdo)) {
+        background: linear-gradient(to right, black, rgba(0,0,0,.5), transparent) !important;
+        bottom: calc(var(--whiteHealthHeight) + 16px)!important;
+    }
+    /*
     div.controls:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 26px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        margin: 0 !important;
-        padding: 0 !important;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 
-        background: black !important;
-        -webkit-mask-image: linear-gradient(to right, rgb(40 40 40 / 60%), transparent);
-    }
-    */
-    .battle, .innerbattle, .weather {
-        width: 100vw !important;
-    }
+    background: black !important;
+    -webkit-mask-image: linear-gradient(to right, rgb(40 40 40 / 60%), transparent);
+}
+
     .backdrop {
         min-width: 693px !important;
         width: 100vw !important;
         transform: scaleX(1.2);
         background-size: contain !important;
         left: 0 !important;
-    }
+    } */
     .leftbar .trainer.trainer-near {
         top: -49px !important;
         grid-template-areas: "pkmn1 pkmn2 trainername";
@@ -845,7 +880,7 @@ div [aria-label="Active Pokemon"] {
     .leftbar .trainer.trainer-near .teamicons:nth-child(2) {
         grid-area: pkmn2;
     }
-    /* pokemon healthbar grid */
+    /* pokemon healthbar grid
     div [aria-label="Active Pokemon"] {
         --diff-healthbar: 200px;
         --bot-top-healthbar: calc(100vh - var(--diff-healthbar) - 10px);
@@ -854,7 +889,7 @@ div [aria-label="Active Pokemon"] {
         grid-template-rows: 100px var(--bot-top-healthbar) 100px !important;
         column-gap: 20px;
         width: 100vw;
-    }
+    }*/
     /* display user pokemon a bit higher to not go behind healthbar */
     .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(4) img {
         margin: -40px 0 0 -24px !important;
@@ -869,10 +904,7 @@ div [aria-label="Active Pokemon"] {
         padding-bottom: 10px;
         background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
     }
-    /* fix position real time battle log */
-    .innerbattle {
-        width: 100vw !important;
-    }
+
     .messagebar.message {
         font-size: 8pt;
         margin-bottom: 32%;
@@ -889,7 +921,7 @@ div [aria-label="Active Pokemon"] {
         line-height: 4pt;
     }
     .battle-chat-toggle.button[name=showChat] {
-        top: 24px;
+        top: 90px;
         display: block !important;
     }
 }
@@ -1030,8 +1062,8 @@ div [aria-label="Active Pokemon"] {
 img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 {
     /* -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-      filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
-      transform: scale3d(1, 1, 1.00001); */
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 18px 37px 19px);
+    transform: scale3d(1, 1, 1.00001); */
     padding-bottom: 10px;
     background-image: radial-gradient(
         closest-side at 50% 90%,
@@ -1251,11 +1283,11 @@ img[src^="https://play.pokemonshowdown.com/sprites/ani"]
 }
 
 /*
-      .switchselect,
-      .moveselect {
-          display: none !important;
-      }
-    */
+.switchselect,
+.moveselect {
+display: none !important;
+}
+*/
 
 /**************/
 /* MOVE TYPES */
@@ -1698,10 +1730,10 @@ abbr[title]:hover::after {
     }
     div.team[name="edit"] {
         --teampreview_box: rgb(255,255,255);
-        
+
         --teampreview_box_shadow1: rgba(0,0,0,0.12);
         --teampreview_box_shadow2: rgba(0,0,0,0.24);
-        
+
         --teampreview_box_shadow_over1: rgba(0,0,0,0.16);
         --teampreview_box_shadow_over2: rgba(0,0,0,0.23);
     }
@@ -1713,10 +1745,10 @@ abbr[title]:hover::after {
     }
     div.team[name="edit"] {
         --teampreview_box: gray;
-        
+
         --teampreview_box_shadow1: rgba(255,255,255,0.12);
         --teampreview_box_shadow2: rgba(255,255,255,0.24);
-        
+
         --teampreview_box_shadow_over1: rgba(255,255,255,0.16);
         --teampreview_box_shadow_over2: rgba(255,255,255,0.23);
     }
@@ -1748,13 +1780,13 @@ abbr[title]:hover::after {
 .selectFolder {
     display: flex !important;
     align-items: center;
-    
+
     padding: 4px !important;
     margin: 4px 0 4px 0 !important;
-    
+
     text-wrap: wrap;
     text-overflow: ellipsis;
-    
+
     background-color: white !important;
     border-radius: 50px !important;
     border: none !important;
@@ -1916,7 +1948,7 @@ li:has(button[name="addPokemon"]) {
     height: 14px;
     position: relative;
     z-index: 0;
-    
+
     content: none !important;
     background-size: 10px;
     background-position: 1px 2px;
@@ -1926,12 +1958,12 @@ li:has(button[name="addPokemon"]) {
     content: "";
     display: inline-block;
     transform: scale(1,2);
-    
+
     position: relative;
     width: 52px !important;
     height: 14px !important;
     z-index: 1;
-    
+
     background-color: #5C4D5D;
     background-size: cover;
     background-origin: padding-box;
@@ -1941,14 +1973,14 @@ li:has(button[name="addPokemon"]) {
 .setcell-typeicons > img[src*="types"]:after {
     display: inline-block;
     transform: scale(1,2);
-    
+
     position: relative;
     width: 52px;
     height: 14px;
     top: -53.5px;
     left: 14px;
     z-index: 2;
-    
+
     color: white;
     font-weight: bold;
     font-size: 7px;
@@ -2325,7 +2357,7 @@ li.result>a[data-entry*="pokemon|"] {
     margin: 8px 0 8px 1rem;
 
     overflow: hidden; /* fix issue for attack type icon scaled by 5. */
-    
+
     background: linear-gradient(to left, white 50%, black 50%) right;
     background-size: 201% 101%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -2374,7 +2406,7 @@ li.result>a[data-entry*="ability|"]:hover,
 li.result>a[data-entry*="pokemon|"]:hover {
     opacity: 1 !important;
     transition: background .4s ease;
-    
+
     background: linear-gradient(to left, white 50%, black 50%) left;
     background-size: 201% 102%;
     border: 3px solid white;
