@@ -331,14 +331,14 @@ div [aria-label="Active Pokemon"] {
 }
 
 /* Fix position full enemy team preview */
-.innerbattle div:nth-child(5) div:nth-child(1):has(img[src$=".gif"]:nth-child(3)~img) > img {
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src*="sprites"]:nth-child(5)~img) > img {
     margin: -10px 0 0 50px !important;
 }
-.innerbattle div:nth-child(5) div:nth-child(1):has(img[src$=".gif"]:nth-child(3)~img) > div {
+.innerbattle div:nth-child(5) div:nth-child(1):has(img[src*="sprites"]:nth-child(5)~img) > div {
     margin: 0px 0 0 50px !important;
 }
 /* Fix position full player team preview  */
-.innerbattle div:nth-child(5) div:nth-child(4):has(img[src$=".gif"]:nth-child(3)~img) > div {
+.innerbattle div:nth-child(5) div:nth-child(4):has(img[src*="sprites"]:nth-child(5)~img) > div {
     margin: -10px 0 0 -50px !important;
 }
 
@@ -911,9 +911,9 @@ div [aria-label="Active Pokemon"] {
         padding-bottom: 10px;
         background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
     }
-    /* display foes pokemon a bit to the right */
+    /* display foes pokemon */
     .innerbattle div:has(>div>img[src^="https://play.pokemonshowdown.com/sprites/"]:not([class]))>div:nth-child(1) img {
-        margin: -40px 0 0 32px !important;
+        margin: -40px 0 0 10px !important;
         /* Shadow support for pokemon without 3d sprites yet */
         padding-bottom: 10px;
         background-image: radial-gradient(closest-side at 50% 90%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 90%);
@@ -921,9 +921,9 @@ div [aria-label="Active Pokemon"] {
 
     .messagebar.message {
         font-size: 8pt;
-        margin-bottom: 32%;
-        left: 0;
-        max-width: 280px;
+        margin-bottom: 8%;
+        left: calc(var(--battlescreen-width) - 255px) !important;
+        max-width: 235px;
         max-height: 150px !important;
         overflow: visible;
     }
