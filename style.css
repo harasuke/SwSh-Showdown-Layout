@@ -33,6 +33,7 @@ author:	Tigerar1 (https://sketchfab.com/allanromanreyes)
     --whiteHealthHeight: 55px;
     --battlescreen-width: 640px;
     --battlescreen-height: 410px;
+    --bottom-padding-fix: 8px;
     /* teambuilder room colors */
     --bg_color_teambuilder: rgba(51,51,51,0.1);
     /*Colors of types*/
@@ -128,7 +129,7 @@ author:	Tigerar1 (https://sketchfab.com/allanromanreyes)
     margin-left: -200px;
     padding-top: 200px;
     margin-top: -200px;
-    transform: translate(107px, 115px) scale(0.35)
+    transform: translate(107px, 115px) scale(0.35);
 }
 .battlecount:hover {
     background: url(https://i.imgur.com/WqKmpID.gif) !important;
@@ -665,6 +666,10 @@ div [aria-label="Active Pokemon"] {
 /* Battle Settings for mobile accessibility*/
 /*******************************************/
 @media (max-height: 570px) and (min-width: 440px) {
+    :root {
+        --battlescreen-height: min(410px, 100vh);
+        --bottom-padding-fix: 16px;
+    }
     #tooltipwrapper[role="tooltip"] {
         position: absolute !important;
         top: 350px !important;
@@ -694,7 +699,7 @@ div [aria-label="Active Pokemon"] {
         /*align-items: center;*/
         align-items: flex-end;
         position: absolute !important;
-        bottom: -24px;
+        bottom: 0 !important;
         left: 450px;
         transform: scale(.8);
     }
@@ -705,7 +710,7 @@ div [aria-label="Active Pokemon"] {
         flex-wrap: wrap;
 
         position: absolute;
-        top: -200px;
+        top: -230px;
         left: 0px;
         width: 250px;
         max-width: 250px;
@@ -720,20 +725,21 @@ div [aria-label="Active Pokemon"] {
         background-color: rgba(51, 51, 51, 0.3);
     }
     .battle-controls:has(.switchmenu > button[name="chooseMoveTarget"]) .switchmenu:nth-child(3) {
-        top: -156px;
+        top: -186px;
     }
 
     /* Attack button */
     .moveselect {
-        position: absolute !important;
-        bottom: calc(var(--whiteHealthHeight) * -1 + 8px);
+        position: fixed !important;
+        /* bottom: calc(var(--whiteHealthHeight) * -1 + var(--bottom-padding-fix)); */
+        bottom: 8px !important;
         left: 410px;
         /*left: 550px;*/
     }
     /* Switch button */
     .switchselect {
-        position: absolute !important;
-        bottom: calc(var(--whiteHealthHeight) * -1 + 8px);
+        position: fixed !important;
+        bottom: 8px !important;
         left: 526px;
         /*left: 550px;*/
     }
@@ -788,8 +794,11 @@ div [aria-label="Active Pokemon"] {
         background-color: black !important;
     }
     .whatdo {
-        margin-bottom: 0;
+        position: fixed !important;
+        margin-bottom: 0 !important;
         padding: 0 !important;
+        bottom: calc(var(--whiteHealthHeight) + 24px)  !important;
+        width: var(--battlescreen-width) !important;
     }
 
     .whatdo>button[name="openTimer"] {
@@ -799,13 +808,16 @@ div [aria-label="Active Pokemon"] {
         top:-354px;
         */
         left: 8px !important;
-        bottom: calc(var(--whiteHealthHeight) - 16px);
+        bottom: calc(100% + 8px) !important;
+    }
+    .whatdo {
+        font-size: .8em !important;
     }
     /* Open timer when every move has been selected */
     .controls>p>button[name="openTimer"] {
         position: absolute !important;
-        bottom: calc(var(--whiteHealthHeight) + 36px) !important;
         left: 8px !important;
+        top: calc(100% + 8px) !important;
     }
 
     .ps-room .battle-controls {
@@ -825,7 +837,7 @@ div [aria-label="Active Pokemon"] {
     
     div.controls {
         background: transparent;
-        bottom: calc(var(--whiteHealthHeight) + 8px)!important;
+        bottom: calc(var(--whiteHealthHeight) + var(--bottom-padding-fix))!important;
     }
     div.controls .whatdo {
         background: linear-gradient(to right, black, transparent, transparent) !important;
@@ -834,7 +846,8 @@ div [aria-label="Active Pokemon"] {
     }
     .controls:not(:has(.whatdo)) {
         background: linear-gradient(to right, black, rgba(0,0,0,.5), transparent) !important;
-        bottom: calc(var(--whiteHealthHeight) + 16px)!important;
+        /* bottom: calc(var(--whiteHealthHeight) + var(--bottom-padding-fix) * 6) !important; */
+        bottom: calc(var(--battlescreen-height) - var(--whiteHealthHeight) * 4) !important;
     }
     /*
     div.controls:before {
